@@ -36,11 +36,11 @@ const html = () => {
 
 //Scripts
 
-// const scripts = () => {
-// return gulp.src('source/js/*.js')
-//   .pipe(terser())
-//   .pipe(gulp.dest('build/js'));
-// }
+const scripts = () => {
+return gulp.src('source/js/*.js')
+  .pipe(terser())
+  .pipe(gulp.dest('build/js'));
+}
 
 // Images
 
@@ -88,17 +88,17 @@ const sprite = () => {
 
 // Copy
 
-// const copy = (done) => {
-//   gulp.src([
-//     'source/fonts/*.{woff,woff2}',
-//     'source/*.ico',
-//     'source/manifest.webmanifest'
-//   ], {
-//     base: 'source'
-//   })
-//   .pipe(gulp.dest('build'))
-// done();
-// }
+const copy = (done) => {
+  gulp.src([
+    'source/fonts/*.{woff,woff2}',
+    // 'source/*.ico',
+    // 'source/manifest.webmanifest'
+  ], {
+    base: 'source'
+  })
+  .pipe(gulp.dest('build'))
+done();
+}
 
 // Clean
 
@@ -132,7 +132,7 @@ export const reload = (done) => {
 
 export const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
-  // gulp.watch('source/js/main.js', gulp.series(scripts, reload));
+  gulp.watch('source/js/main.js', gulp.series(scripts, reload));
   gulp.watch('source/*.html').on('change', gulp.series(html, reload));
   gulp.watch('source/img/**/*.{jpg,png,svg}', gulp.series(copyImages, createWebp, styles, html, reload));
   gulp.watch('source/img/sprite/*.svg', gulp.series(sprite, styles, html, reload));
@@ -147,7 +147,7 @@ export const build = gulp.series(
   gulp.parallel(
     styles,
     html,
-    // scripts,
+    scripts,
     svgTask,
     sprite,
     createWebp
@@ -161,7 +161,7 @@ export default gulp.series(
   gulp.parallel(
     html,
     styles,
-    // scripts,
+    scripts,
     svgTask,
     sprite,
     createWebp
