@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Мишка</title>
   </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
-
+  <body class="page__body">
+    <header class="main-header">
+      <a class="main-header__logo">
+        <picture>
+          <source type="image/svg" media="(min-width: 1200px)" srcset="img/logo-desktop" width="113" height="46">
+          <img class="main-header__logo-img" src="img/logo.svg" alt="Логотип интернет магазина Мишка." width="86" height="35">
+        </picture>
+      </a>
+      <button class="main-header__toggle">
+        <span class="visually-hidden">Открыть/Закрыть меню.</span>
+      </button>
+      <nav class="main-header__main-nav main-nav">
+        <ul class="main-nav__list">
+          <li class="main__nav-item">
+            <a  class="main-nav__link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="main__nav-item">
+            <a  class="main-nav__link" href="catalog.html">Вязание на заказ</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-header__site-navigation site-navigation">
+        <a href="#" class="site-navigation__link">Поиск по сайту</a>
+      </div>
+    </header>
   </body>
-</html>
+  </html>
