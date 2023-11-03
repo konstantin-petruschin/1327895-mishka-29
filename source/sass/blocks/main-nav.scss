@@ -1,0 +1,42 @@
+@use "../common/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
+.main-nav {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
+
+  &--stock {
+    display: none;
+
+    @include m.desktop {
+      display: flex;
+    }
+  }
+}
+
+.main-nav__link {
+  position: relative;
+  padding: 27px 20px 27px 76px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  color: v.$color-title;
+  border-bottom: 1px solid v.$color-border;
+}
+
+.main-nav__icon {
+  color: rgba(v.$color-title, $alpha: 0.2);
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+}
