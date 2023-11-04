@@ -41,6 +41,10 @@ img {
   flex-direction: column;
   min-height: 100vh;
 
+  &--index {
+    font-size: 15px;
+  }
+
   @include m.tablet {
     font-size: 17px;
     line-height: 30px;

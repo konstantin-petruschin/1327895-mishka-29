@@ -1,0 +1,15 @@
+@use "../common/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
+.popular {
+  padding-top: 27px;
+  padding-bottom: 36px;
+}
+
+.popular__characteristic {
+  border: 1px solid red;
+}
+
+.popular__name {
+  min-width: 97px;
+}
