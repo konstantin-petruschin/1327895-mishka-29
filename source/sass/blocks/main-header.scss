@@ -7,16 +7,12 @@
   padding-top: 22px;
   padding-bottom: 22px;
   border-bottom: 1px solid v.$color-border;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-header__logo {
-  position: absolute;
-  top: 22px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: block;
-  width: 86px;
-  z-index: 3;
+  align-self: center;
 
   &:hover,
   &:focus {

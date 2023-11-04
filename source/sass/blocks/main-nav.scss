@@ -6,7 +6,8 @@
   top: 80px;
   left: 0;
   width: 100%;
-  display: flex;
+  // display: flex;
+  display: none;
   flex-direction: column;
 }
 
@@ -25,7 +26,7 @@
 
 .main-nav__link {
   position: relative;
-  padding: 27px 20px 27px 76px;
+  padding: 27px 30px 27px 76px;
   text-decoration: none;
   font-size: 17px;
   font-weight: 700;
