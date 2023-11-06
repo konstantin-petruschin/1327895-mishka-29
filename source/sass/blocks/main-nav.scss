@@ -3,12 +3,13 @@
 
 .main-nav {
   position: absolute;
-  top: 80px;
+  top: 86px;
   left: 0;
   width: 100%;
   // display: flex;
   display: none;
   flex-direction: column;
+  background-color: #ffffff;
 }
 
 .main-nav__list {
