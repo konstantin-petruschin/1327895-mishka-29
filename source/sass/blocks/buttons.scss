@@ -17,5 +17,14 @@
   &--primary {
     border: 2px solid v.$color-text;
     background-color: #ffffff;
+
+    &:hover {
+      background-color: v.$color-text;
+      color: #ffffff;
+    }
+
+    &:active {
+      color: rgba($color: #ffffff, $alpha: 0.3)
+    }
   }
 }

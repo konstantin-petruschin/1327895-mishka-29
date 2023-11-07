@@ -28,4 +28,35 @@
 
 .slider__autor-link {
   text-decoration: none;
+  margin-bottom: 30px;
+  display: inline-block;
 }
+
+.slider__flips-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 38px;
+}
+
+.slider__flip {
+  border: 1px solid v.$color-border;
+  background-image: url("../img/icons/next.svg");
+  background-repeat: no-repeat;
+  background-position: center left 38px;
+  background-color: transparent;
+  height: 58px;
+
+  &--prev {
+    border-left: none;
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
