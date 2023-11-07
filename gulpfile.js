@@ -134,7 +134,7 @@ export const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/js/main.js', gulp.series(scripts, reload));
   gulp.watch('source/*.html').on('change', gulp.series(html, reload));
-  gulp.watch('source/img/**/*.{jpg,png,svg}', gulp.series(copyImages, createWebp, styles, html, reload));
+  gulp.watch('source/img/**/*.{jpg,png,svg}', gulp.series(copyImages, createWebp, svgTask, styles, html, reload));
   gulp.watch('source/img/sprite/*.svg', gulp.series(sprite, styles, html, reload));
 }
 

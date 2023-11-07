@@ -1,0 +1,31 @@
+@use "../common/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
+.slider__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slider__text {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 33px;
+}
+
+.slider__autor,
+.slider__autor-link {
+  font-size: 17px;
+  color: v.$color-title;
+}
+
+.slider__autor {
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.slider__autor-link {
+  text-decoration: none;
+}
