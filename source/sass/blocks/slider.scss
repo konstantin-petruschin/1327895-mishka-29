@@ -36,6 +36,10 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-bottom: 38px;
+
+  @include m.tablet {
+    width: 260px;
+  }
 }
 
 .slider__flip {
@@ -45,6 +49,10 @@
   background-position: center left 38px;
   background-color: transparent;
   height: 58px;
+
+  @include m.tablet {
+    border: none;
+  }
 
   &--prev {
     border-left: none;
