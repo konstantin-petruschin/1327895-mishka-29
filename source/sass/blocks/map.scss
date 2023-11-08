@@ -1,0 +1,7 @@
+@use "../common/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
+.map__image {
+  width: 100%;
+  display: block;
+}

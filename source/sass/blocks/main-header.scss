@@ -36,4 +36,10 @@
   background-color: transparent;
   background-repeat: no-repeat;
   z-index: 10;
+
+  &--closed {
+    background-image: url("../img/icons/menu-close.svg");
+    width: 21px;
+    height: 20px;
+  }
 }

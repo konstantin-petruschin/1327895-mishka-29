@@ -6,9 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Мишка</title>
   <link href="css/style.min.css" rel="stylesheet" as="style">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=05c44d75-7165-414e-b9aa-78dacc85a092&lang=ru_RU" defer>
+  </script>
+  <script src="./js/main.js" defer></script>
 </head>
 
-<body class="page__body page__body--index">
+<body class="page__body page__body--index no-js">
   <header class="main-header">
     <a class="main-header__logo">
       <picture>
@@ -123,9 +126,11 @@
       <div class="review__slider slider">
         <ul class="slider__list">
           <li class="slider__item">
-            <p class="slider__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+            <p class="slider__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества
+              лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои
+              фотографии сразу стали более стильными, а также набирают больше лайков!</p>
             <p class="slider__autor">Анастасия Красильникова</p>
-            <a class="slider__autor-link" href="#" >@misssssiskras</a>
+            <a class="slider__autor-link" href="#">@misssssiskras</a>
           </li>
         </ul>
         <div class="slider__flips-wrapper">
@@ -139,20 +144,52 @@
         <a href="#" class="slider__button button button--primary">Написать</a>
       </div>
     </section>
-    <section class="address container">
-      <h2 class="address__title title title--min">Контакты</h2>
-      <div class="address__item">
-        <span class="address__name">e-mail:</span>
-        <a class="address__link" href="#">info@mimimishkashop.ru</a>
-      </div>
-      <div class="address__item">
-        <span class="address__name">адрес:</span>
-        <address class="address__value">Санкт-Петербург<br>ул. Большая Конюшенная<br>д. 19/8, офис 101</address>
+    <section class="address">
+      <div class="address__wrapper container">
+        <h2 class="address__title title title--min">Контакты</h2>
+        <div class="address__item">
+          <span class="address__name">e-mail:</span>
+          <a class="address__link" href="#">info@mimimishkashop.ru</a>
+        </div>
+        <div class="address__item">
+          <span class="address__name">адрес:</span>
+          <address class="address__value">Санкт-Петербург<br>ул. Большая Конюшенная<br>д. 19/8, офис 101</address>
+        </div>
       </div>
 
+      <div class="address__map map">
+        <h3 class="visually-hidden">Расположение магазина «Мишка» на карте.</h3>
+        <div class="map__image-wrapper">
+          <picture>
+            <source type="image/webp" media="(min-width: 1150px)"
+              srcset="./img/map-desktop.webp 1x, ./img/map-desktop@2x.webp 2x" width="527" height="457">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="./img/map-tablet.webp 1x, ./img/map-tablet@2x.webp 2x" width="768" height="457">
+            <source type="image/webp" srcset="./img/map-mobile.webp 1x, ./img/map-mobile@2x.webp 2x" width="320"
+              height="454">
+            <source media="(min-width: 1150px)" srcset="./img/map-desktop.jpg 1x, ./img/map-desktop@2x.jpg 2x"
+              width="525" height="636">
+            <source media="(min-width: 768px)" srcset="./img/map-tablet.jpg 1x, ./img/map-tablet@2x.jpg 2x" width="768"
+              height="457">
+            <img class="map__image" src="./img/map-mobile.jpg" srcset="./img/map-mobile@2x.jpg 2x" width="320"
+              height="454">
+          </picture>
+          <div class="map__yandex" id="map"></div>
+        </div>
 
+      </div>
+      <a class="address__button button button--primary" href="#">Напишите нам</a>
     </section>
   </main>
+  <footer class="footer container">
+    <a class="footer__link" href="#">
+      <span class="visually-hidden">Ссылка на главную страницу.</span>
+      <svg class="footer__logo" width="102" height="34" role="img">
+        <use xlink:href="img/sprites/sprite.svg#logo-footer"></use>
+      </svg>
+    </a>
+
+  </footer>
 </body>
 
 </html>
