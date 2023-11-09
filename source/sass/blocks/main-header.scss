@@ -9,10 +9,30 @@
   border-bottom: 1px solid v.$color-border;
   display: flex;
   flex-direction: column;
+
+  @include m.tablet {
+    border: none;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .main-header__logo {
   align-self: center;
+
+  @include m.tablet {
+    position: absolute;
+    left: 50px;
+    top: 22px;
+    z-index: 20;
+  }
+
+  @include m.desktop {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+
 
   &:hover,
   &:focus {
@@ -41,5 +61,9 @@
     background-image: url("../img/icons/menu-close.svg");
     width: 21px;
     height: 20px;
+  }
+
+  @include m.tablet {
+    display: none;
   }
 }
