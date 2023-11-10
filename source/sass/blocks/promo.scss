@@ -4,6 +4,10 @@
 .promo {
   background-image: url("../img/hero-mobile.png");
   background-repeat: no-repeat;
+
+  @include m.tablet {
+    background-image: url("../img/hero-desktop.png");
+  }
 }
 
 .promo__text {
@@ -11,6 +15,16 @@
   padding-bottom: 20px;
   text-align: center;
   min-height: 285px;
+
+  @include m.tablet {
+    min-height: 630px;
+  }
+}
+
+.promo__title {
+  @include m.tablet {
+
+  }
 }
 
 .promo__assortment {

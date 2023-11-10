@@ -29,10 +29,9 @@
 
   @include m.desktop {
     left: 50%;
+    top: 9px;
     transform: translateX(-50%);
   }
-
-
 
   &:hover,
   &:focus {

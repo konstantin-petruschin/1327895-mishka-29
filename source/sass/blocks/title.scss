@@ -9,6 +9,11 @@
   font-weight: 700;
   line-height: 30px;
 
+  @include m.tablet {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
   &--min {
     font-size: 25px;
   }
