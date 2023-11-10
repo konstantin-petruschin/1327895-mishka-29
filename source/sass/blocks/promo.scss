@@ -21,12 +21,6 @@
   }
 }
 
-.promo__title {
-  @include m.tablet {
-
-  }
-}
-
 .promo__assortment {
   display: flex;
   flex-direction: column;
