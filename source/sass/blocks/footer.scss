@@ -1,0 +1,84 @@
+@use "../common/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: v.$color-background;
+}
+
+.footer__link {
+  display: none;
+
+  @include m.tablet {
+    display: block;
+  }
+}
+
+.footer__logo {
+  color: v.$color-title;
+}
+
+.footer__socials-list {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 145px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 25px;
+  padding-bottom: 30px;
+}
+
+.footer__social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: v.$color-title;
+}
+
+.footer__wrapper {
+  border-top: 1px solid #e5e5e5;
+  width: 100%;
+}
+
+.footer__developer {
+  padding-top: 22px;
+  padding-bottom: 22px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 26px;
+
+}
+
+.footer__developer-icon {
+  color: v.$color-primary;
+}
+
+.footer__developer-name {
+  color: v.$color-title;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.footer__link:hover .footer__logo,
+.footer__link:focus .footer__logo,
+.footer__social-link:hover .footer__social-icon,
+.footer__social-link:focus .footer__social-icon,
+.footer__developer:hover .footer__logo,
+.footer__developer:focus .footer__logo {
+  color: #46c1ae;
+}
+
+.footer__link:focus .footer__logo,
+.footer__social-link:active .footer__social-icon {
+  opacity: 0.3;
+}
+

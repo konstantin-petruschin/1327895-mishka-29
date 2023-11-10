@@ -1,0 +1,53 @@
+@use "../common/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
+.popular {
+  padding-top: 27px;
+  padding-bottom: 36px;
+}
+
+.popular__subtitle {
+  color: v.$color-primary;
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 17px;
+}
+
+.popular__text {
+  margin-bottom: 28px;
+}
+
+.popular__characteristic {
+  display: flex;
+  border-bottom: 1px solid v.$color-border;
+  column-gap: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.popular__name {
+  max-width: 80px;
+  flex-grow: 1;
+}
+
+.popular__value {
+  margin: 0;
+}
+
+.popular__card {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+.popular__img {
+  width: 100%;
+  margin-top: 27px;
+  display: block;
+}
+
+.popular__link {
+  width: 100%;
+}

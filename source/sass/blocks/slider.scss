@@ -1,0 +1,70 @@
+@use "../common/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
+.slider__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slider__text {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 33px;
+}
+
+.slider__autor,
+.slider__autor-link {
+  font-size: 17px;
+  color: v.$color-title;
+}
+
+.slider__autor {
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.slider__autor-link {
+  text-decoration: none;
+  margin-bottom: 30px;
+  display: inline-block;
+}
+
+.slider__flips-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 38px;
+
+  @include m.tablet {
+    width: 260px;
+  }
+}
+
+.slider__flip {
+  border: 1px solid v.$color-border;
+  background-image: url("../img/icons/next.svg");
+  background-repeat: no-repeat;
+  background-position: center left 38px;
+  background-color: transparent;
+  height: 58px;
+
+  @include m.tablet {
+    border: none;
+  }
+
+  &--prev {
+    border-left: none;
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+

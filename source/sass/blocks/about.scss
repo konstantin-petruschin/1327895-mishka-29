@@ -1,0 +1,92 @@
+@use "../common/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
+.about__title {
+  margin-bottom: 14px;
+}
+
+.about__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 58px;
+}
+
+.about__item {
+  display: flex;
+  flex-direction: column;
+  color: v.$color-title;
+  font-size: 17px;
+  font-weight: 700;
+
+  &--material {
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+
+  &--price {
+    gap: 26px;
+    margin-bottom: 35px;
+  }
+
+  &--likes {
+    gap: 21px;
+    margin-bottom: 32px;
+  }
+
+  &--handmade {
+    gap: 17px;
+    margin-bottom: 33px;
+  }
+
+  &--support {
+    gap: 26px;
+    margin-bottom: 32px;
+  }
+
+  &--packaging {
+    gap: 20px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    background-repeat: no-repeat;
+  }
+
+  &--material::before {
+    background-image: url("../img/icons/flower.svg");
+    width: 33px;
+    height: 38px;
+  }
+
+  &--price::before {
+    background-image: url("../img/icons/price.svg");
+    width: 47px;
+    height: 27px;
+  }
+
+  &--likes::before {
+    background-image: url("../img/icons/like.svg");
+    width: 34px;
+    height: 27px;
+  }
+
+  &--handmade::before {
+    background-image: url("../img/icons/skein.svg");
+    width: 35px;
+    height: 34px;
+  }
+
+  &--support::before {
+    background-image: url("../img/icons/rocket.svg");
+    width: 55px;
+    height: 23px;
+  }
+
+  &--packaging::before {
+    background-image: url("../img/icons/present.svg");
+    width: 33px;
+    height: 32px;
+  }
+}

@@ -1,0 +1,68 @@
+@use "../common/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
+.main-header {
+  position: relative;
+  min-height: 79px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid v.$color-border;
+  display: flex;
+  flex-direction: column;
+
+  @include m.tablet {
+    border: none;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.main-header__logo {
+  align-self: center;
+
+  @include m.tablet {
+    position: absolute;
+    left: 50px;
+    top: 22px;
+    z-index: 20;
+  }
+
+  @include m.desktop {
+    left: 50%;
+    top: 9px;
+    transform: translateX(-50%);
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-header__toggle {
+  position: absolute;
+  border: none;
+  width: 20px;
+  height: 14px;
+  top: 22px;
+  right: 30px;
+  background-image: url("../img/icons/menu.svg");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  z-index: 10;
+
+  &--closed {
+    background-image: url("../img/icons/menu-close.svg");
+    width: 21px;
+    height: 20px;
+  }
+
+  @include m.tablet {
+    display: none;
+  }
+}
