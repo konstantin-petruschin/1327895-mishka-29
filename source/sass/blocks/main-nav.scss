@@ -20,16 +20,6 @@
     display: grid;
     grid-template-columns: auto 350px;
     grid-template-rows: minmax(88px, auto) auto;
-
-    &::after {
-      content: "";
-      position: absolute;
-      background-color: rgba(v.$color-title, $alpha: 0.1);
-      height: 1px;
-      width: 100%;
-      left: 0;
-      bottom: 70px;
-    }
   }
 
   @include m.desktop {

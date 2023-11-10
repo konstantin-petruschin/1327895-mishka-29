@@ -63,14 +63,12 @@ img {
   padding-right: 30px;
 
   @include m.tablet {
-    max-width: v.$tablet;
+    min-width: v.$tablet;
     padding-left: 50px;
     padding-right: 50px;
   }
 
   @include m.desktop {
     max-width: v.$desktop;
-    padding-left: 110px;
-    padding-right: 110px;
   }
 }
