@@ -17,6 +17,8 @@
 
   @include m.tablet {
     position: static;
+    min-width: v.$tablet;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: auto 350px;
     grid-template-rows: minmax(88px, auto) auto;
@@ -24,6 +26,7 @@
 
   @include m.desktop {
     grid-template-columns: 1fr 149px 1fr;
+    max-width: v.$desktop;
   }
 }
 

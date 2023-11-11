@@ -1,6 +1,9 @@
 @use "../common/variables.scss" as v;
 @use "../mixins/media.scss" as m;
 
+.review {
+  padding-bottom: 45px;
+}
 
 .review__title {
   margin-bottom: 14px;

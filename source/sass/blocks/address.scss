@@ -4,6 +4,7 @@
 .address {
   padding-top: 38px;
   padding-bottom: 38px;
+  background: url("../img/zigzag-mobile.svg") top repeat-x;
 }
 
 .address__wrapper {
@@ -56,6 +57,10 @@
 }
 
 .address__button {
-  margin-left: 30px;
-  margin-right: 30px;
+  margin: 0 30px;
+
+  @include m.tablet {
+    width: 230px;
+    margin: 0 auto;
+  }
 }
