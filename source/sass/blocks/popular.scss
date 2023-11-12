@@ -5,6 +5,21 @@
   padding-top: 27px;
   padding-bottom: 36px;
   background: url("../img/zigzag-mobile.svg") bottom repeat-x;
+
+  @include m.tablet {
+    background-image: url("../img/zigzag-tablet.svg");
+  }
+
+  @include m.desktop {
+    background-image: url("../img/zigzag-desktop.svg");
+    padding-left: 50px;
+  }
+}
+
+.popular__wrapper {
+  @include m.desktop {
+    padding-left: 175px;
+  }
 }
 
 .popular__subtitle {
@@ -15,8 +30,31 @@
   margin-bottom: 17px;
 }
 
+.popular__description {
+  @include m.tablet {
+    display: grid;
+    column-gap: 42px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+  }
+}
+
 .popular__text {
+  margin: 0;
+  padding: 0;
   margin-bottom: 28px;
+
+  @include m.tablet {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+}
+
+.popular__list {
+  @include m.tablet {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+  }
 }
 
 .popular__characteristic {
@@ -36,11 +74,11 @@
   margin: 0;
 }
 
-.popular__card {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  align-items: center;
+.popular__image-wrapper {
+  @include m.tablet {
+    grid-row: 1 / 5;
+    grid-column: 2 / 3;
+  }
 }
 
 .popular__img {
@@ -49,6 +87,19 @@
   display: block;
 }
 
+.popular__price {
+  @include m.tablet {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+  }
+}
+
 .popular__link {
   width: 100%;
+
+  @include m.tablet {
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+    align-self: end
+  }
 }

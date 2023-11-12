@@ -9,12 +9,17 @@
   font-weight: 700;
   line-height: 30px;
 
+  &--min {
+    font-size: 25px;
+  }
+
   @include m.tablet {
     font-size: 43px;
     line-height: 50px;
   }
 
-  &--min {
-    font-size: 25px;
+  @include m.desktop {
+    font-size: 53px;
+    line-height: 57px;
   }
 }

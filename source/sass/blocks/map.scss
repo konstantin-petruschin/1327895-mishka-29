@@ -9,4 +9,9 @@
   @include m.tablet {
     height: 757px;
   }
+
+  @include m.desktop {
+    height: 457px;
+    width: 527px;
+  }
 }
