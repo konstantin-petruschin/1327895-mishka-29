@@ -1,6 +1,10 @@
 @use "../common/variables.scss" as v;
 @use "../mixins/media.scss" as m;
 
+.slider {
+  position: relative;
+}
+
 .slider__list {
   margin: 0;
   padding: 0;
@@ -38,7 +42,12 @@
   margin-bottom: 38px;
 
   @include m.tablet {
-    width: 260px;
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    width: 137px;
+    margin: 0;
+    gap: 37px;
   }
 }
 
@@ -52,6 +61,8 @@
 
   @include m.tablet {
     border: none;
+    height: 26px;
+    background-position: center;
   }
 
   &--prev {
@@ -70,6 +81,9 @@
 
 .slider__button {
   @include m.tablet {
-    max-width: 175px;
+    width: 175px;
+    position: absolute;
+    top: -70px;
+    right: 0;
   }
 }

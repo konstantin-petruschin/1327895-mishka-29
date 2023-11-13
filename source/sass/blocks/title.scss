@@ -11,6 +11,14 @@
 
   &--min {
     font-size: 25px;
+
+    @include m.tablet {
+      max-width: 450px;
+    }
+
+    @include m.tablet {
+      max-width: 545px;
+    }
   }
 
   @include m.tablet {

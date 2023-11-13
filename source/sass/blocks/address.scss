@@ -20,20 +20,18 @@
     padding-top: 71px;
     padding-bottom: 105px;
     padding-left: 50px;
+    padding-right: 50px;
   }
 }
 
 .address__wrapper {
-  padding: 38px 30px 60px 30px;
-
-  @include m.tablet {
-    padding: 68px 50px 49px 0;
-  }
+  padding: 38px 30px  60px;
 
   @include m.desktop {
     grid-row: 1 / 2;
     grid-column: 1 / 2;
-    padding: 50px 50px 165px 175px;
+    padding-left: 175px;
+    padding-right: 50px;
   }
 }
 
@@ -52,8 +50,9 @@
   gap: 25px;
 
   @include m.tablet {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
   }
 
   @include m.desktop {
@@ -66,6 +65,10 @@
   display: flex;
   gap: 10px;
   font-size: 14px;
+
+  @include m.tablet {
+    font-size: 17px;
+  }
 }
 
 .address__name {
@@ -116,7 +119,6 @@
   @include m.desktop {
     grid-row: 2 / 3;
     grid-column: 1 / 1;
-    justify-self: left;
     align-self: end;
   }
 }

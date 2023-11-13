@@ -96,6 +96,13 @@
   &--stocks {
     font-size: 15px;
   }
+
+  &--search {
+    @include m.tablet {
+      border-left: 1px solid rgba(v.$color-title, $alpha: 0.1);
+      border-right: 1px solid rgba(v.$color-title, $alpha: 0.1);
+    }
+  }
 }
 
 .main-nav__text-link--search {
@@ -115,6 +122,8 @@
 .main-nav__text {
   display: none;
   text-align: right;
+  align-self: center;
+  padding-right: 24px;
 
   @include m.tablet {
     display: block;
