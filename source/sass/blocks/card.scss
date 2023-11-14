@@ -1,0 +1,28 @@
+@use "../common/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__name {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+  color: v.$color-title;
+  text-decoration: none;
+
+  @include m.tablet {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.card__description {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid v.$color-border;
+}
