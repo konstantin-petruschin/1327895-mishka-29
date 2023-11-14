@@ -15,7 +15,7 @@
   @include m.desktop {
     background-image: url("../img/zigzag-desktop.svg");
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: auto 527px;
     grid-template-rows: repeat(2, auto);
     padding-top: 71px;
     padding-bottom: 105px;
@@ -26,6 +26,11 @@
 
 .address__wrapper {
   padding: 38px 30px  60px;
+
+  @include m.tablet {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 
   @include m.desktop {
     grid-row: 1 / 2;
