@@ -1,7 +1,16 @@
 @use "../common/variables.scss" as v;
 @use "../mixins/media.scss" as m;
 
+.catalog {
+  margin-bottom: 30px;
+}
+
 .catalog__list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
