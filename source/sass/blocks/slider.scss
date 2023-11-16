@@ -81,7 +81,6 @@
 
 .slider__button {
   @include m.tablet {
-    width: 175px;
     position: absolute;
     top: -70px;
     right: 0;

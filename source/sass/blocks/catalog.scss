@@ -12,4 +12,10 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+
+  @include m.desktop {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 52px;
+  }
 }

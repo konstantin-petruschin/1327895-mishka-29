@@ -9,7 +9,7 @@
 
 .about__wrapper {
   @include m.desktop {
-    padding-left: 175px;
+    padding-left: 172px;
   }
 }
 
@@ -25,7 +25,7 @@
 
   @include m.tablet {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 260px 325px;
     grid-template-rows: repeat(3, auto);
     column-gap: 70px;
 
@@ -39,14 +39,25 @@
   padding-top: 83px;
   color: v.$color-title;
   font-size: 17px;
+  line-height: 20px;
   font-weight: 700;
   background-repeat: no-repeat;
   background-position: left top 20px;
+
+  @include m.tablet {
+    font-size: 20px;
+    line-height: 22px;
+    padding-top: 108px;
+  }
 
   &--material {
     background-image: url("../img/icons/flower.svg");
     grid-column: 1 / 2;
     grid-row: 1 / 1;
+
+    @include m.desktop {
+      background-position: left 5px top 47px;
+    }
   }
 
   &--price {
@@ -54,6 +65,10 @@
     background-position: left top 30px;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+
+    @include m.desktop {
+      background-position: left top 52px;
+    }
   }
 
   &--likes {
@@ -61,6 +76,10 @@
     background-position: left top 35px;
     grid-column: 1 / 2;
     grid-row: 3 / 4;
+
+    @include m.desktop {
+      background-position: left 4px top 60px;
+    }
   }
 
   &--handmade {
@@ -68,6 +87,10 @@
     background-position: left top 32px;
     grid-column: 2 / -2;
     grid-row: 1 / 1;
+
+    @include m.desktop {
+      background-position: left 5px top 52px;
+    }
   }
 
   &--support {
@@ -75,6 +98,10 @@
     background-position: left top 33px;
     grid-column: 2 / -2;
     grid-row: 2 / 3;
+
+    @include m.desktop {
+      background-position: left 4px top 52px;
+    }
   }
 
   &--packaging {
