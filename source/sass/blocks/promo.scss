@@ -5,11 +5,11 @@
   position: relative;
   background-image: url("../img/hero-mobile.png");
   background-repeat: no-repeat;
-  background-size: 100% auto;
-
+  background-size: 100%, auto;
 
   @include m.tablet {
     background-image: url("../img/hero-desktop.png");
+    margin-top: -70px;
 
     &::after {
       content: "";

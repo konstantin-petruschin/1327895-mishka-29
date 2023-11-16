@@ -2,8 +2,6 @@
 @use "../mixins/media.scss" as m;
 
 .address {
-  padding-top: 38px;
-  padding-bottom: 38px;
   background: url("../img/zigzag-mobile.svg") top repeat-x;
 
   @include m.tablet {

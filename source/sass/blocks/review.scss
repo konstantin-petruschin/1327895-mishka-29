@@ -4,17 +4,17 @@
 .review {
   padding-bottom: 45px;
 
-  @include m.tablet {
-    background-image: url("..//img/review-background.jpg");
-    background-repeat: no-repeat;
-  }
-
   @include m.desktop {
     padding-left: 50px;
   }
 }
 
 .review__wrapper {
+  @include m.tablet {
+    background-image: url("..//img/review-background.jpg");
+    background-repeat: no-repeat;
+  }
+
   @include m.desktop {
     padding-left: 175px;
   }

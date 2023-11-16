@@ -22,6 +22,7 @@
     display: grid;
     grid-template-columns: auto 350px;
     grid-template-rows: minmax(88px, auto) auto;
+    background-color: transparent;
   }
 
   @include m.desktop {
@@ -85,6 +86,7 @@
   @include m.tablet {
     padding: 20px 24px;
     border: none;
+    height: 100%;
   }
 
   &--card {
@@ -100,6 +102,13 @@
   &--search {
     @include m.tablet {
       border-left: 1px solid rgba(v.$color-title, $alpha: 0.1);
+      border-right: 1px solid rgba(v.$color-title, $alpha: 0.1);
+      width: 82px;
+    }
+  }
+
+  &--catalog {
+    @include m.tablet {
       border-right: 1px solid rgba(v.$color-title, $alpha: 0.1);
     }
   }
