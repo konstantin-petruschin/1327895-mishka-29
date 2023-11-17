@@ -89,6 +89,10 @@
     height: 100%;
   }
 
+  @include m.desktop {
+    padding: 30px 25px;
+  }
+
   &--card {
     @include m.tablet {
       padding-left: 83px;
@@ -104,11 +108,12 @@
       border-left: 1px solid rgba(v.$color-title, $alpha: 0.1);
       border-right: 1px solid rgba(v.$color-title, $alpha: 0.1);
       width: 82px;
+      padding: 0;
     }
   }
 
   &--catalog {
-    @include m.tablet {
+    @include m.desktop {
       border-right: 1px solid rgba(v.$color-title, $alpha: 0.1);
     }
   }
@@ -133,6 +138,7 @@
   text-align: right;
   align-self: center;
   padding-right: 24px;
+  font-size: 15px;
 
   @include m.tablet {
     display: block;

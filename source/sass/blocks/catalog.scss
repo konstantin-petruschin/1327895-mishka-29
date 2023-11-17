@@ -3,6 +3,14 @@
 
 .catalog {
   margin-bottom: 30px;
+
+  @include m.tablet {
+    padding-top: 67px;
+  }
+
+  @include m.desktop {
+    padding-top: 111px;
+  }
 }
 
 .catalog__list {

@@ -22,6 +22,10 @@
       left: 0;
     }
   }
+
+  @include m.desktop {
+    margin-top: -90px;
+  }
 }
 
 .promo__text {

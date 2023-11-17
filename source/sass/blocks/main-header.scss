@@ -26,6 +26,12 @@
       z-index: 20;
     }
   }
+
+  @include m.tablet {
+    &::after {
+      bottom: 90px;
+    }
+  }
 }
 
 .main-header__logo {

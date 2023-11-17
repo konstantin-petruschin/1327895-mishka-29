@@ -36,11 +36,13 @@
 .popular__subtitle {
   color: v.$color-primary;
   font-size: 17px;
+  line-height: 17px;
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 17px;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+  text-align: center;
 
   @include m.desktop {
     margin-right: 43px;
