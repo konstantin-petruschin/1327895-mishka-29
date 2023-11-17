@@ -2,7 +2,7 @@
 @use "../mixins/media.scss" as m;
 
 .catalog {
-  margin-bottom: 30px;
+  padding-top: 30px;
 
   @include m.tablet {
     padding-top: 67px;
