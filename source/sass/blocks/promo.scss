@@ -39,6 +39,18 @@
   }
 }
 
+.promo__title {
+  @include m.tablet {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @include m.desktop {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+
 .promo__assortment {
   display: flex;
   flex-direction: column;
