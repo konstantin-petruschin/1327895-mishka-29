@@ -23,7 +23,7 @@
     grid-template-columns: auto 350px;
     grid-template-rows: minmax(88px, auto) auto;
     background-color: transparent;
-  }
+      }
 
   @include m.desktop {
     grid-template-columns: 1fr 149px 1fr;

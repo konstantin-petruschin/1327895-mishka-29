@@ -68,6 +68,10 @@
     margin: 0;
     border-bottom: 1px solid v.$color-border;
   }
+
+  @include m.desktop {
+    border: none;
+  }
 }
 
 .video-block__img {

@@ -12,25 +12,53 @@
 
   @include m.desktop {
     background-image: url("../img/zigzag-desktop.svg");
-    padding-left: 50px;
   }
 }
 
 .popular__wrapper {
-  @include m.desktop {
+  @include m.tablet {
+    padding-left: 55px;
+    padding-right: 55px;
     display: grid;
-    grid-template-columns: 100px 292px 525px;
+    grid-template-columns: auto 334px;
     grid-template-rows: repeat(5, auto);
+    column-gap: 51px;
+  }
+
+  @include m.desktop {
+    grid-template-columns: 110px 292px 525px;
+    grid-template-rows: repeat(5, auto);
+    column-gap: 59px;
+  }
+}
+
+.popular__heading {
+  display: flex;
+  flex-direction: column;
+
+  @include m.tablet {
+    position: relative;
+    z-index: 1;
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  @include m.desktop {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    justify-self: start;
+    gap: 43px;
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
   }
 }
 
 .popular__title {
-  grid-column: 2 / 4;
-  grid-row: 1 / 2;
 
-  @include m.desktop {
-    margin-left: 47px;
-  }
 }
 
 .popular__subtitle {
@@ -40,12 +68,14 @@
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 17px;
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
   text-align: center;
 
+  @include m.tablet {
+    max-width: 75px;
+  }
+
   @include m.desktop {
-    margin-right: 43px;
+    margin-left: 9px;
   }
 }
 
@@ -54,18 +84,31 @@
   padding: 0;
   margin-bottom: 28px;
 
+  @include m.tablet {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+  }
+
   @include m.desktop {
     grid-row: 2 / 3;
     grid-column: 2 / 3;
-    margin-left: 47px;
   }
 }
 
 .popular__list {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  line-height: 20px;
+
+  @include m.tablet {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+  }
+
   @include m.desktop {
     grid-row: 3 / 4;
     grid-column: 2  / 3;
-    margin-left: 47px;
   }
 }
 
@@ -75,6 +118,11 @@
   column-gap: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
+
+  @include m.tablet {
+    padding-top: 7px;
+    padding-bottom: 13px;
+  }
 }
 
 .popular__name {
@@ -88,6 +136,11 @@
 
 .popular__image-wrapper {
   @include m.tablet {
+    grid-row: 2 / 6;
+    grid-column: 2 / 3;
+  }
+
+  @include m.desktop {
     grid-row: 1 / 6;
     grid-column: 3 / 4;
   }
@@ -104,6 +157,11 @@
 }
 
 .popular__price {
+  @include m.tablet {
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+  }
+
   @include m.desktop {
     grid-row: 4 / 5;
     grid-column: 2 / 3;
@@ -113,10 +171,14 @@
 .popular__link {
   width: 100%;
 
+  @include m.tablet {
+    grid-row: 5 / 6;
+    grid-column: 1 / 2;
+  }
+
   @include m.desktop {
     grid-row: 5 / 6;
     grid-column: 2 / 3;
     align-self: end;
-    margin-left: 47px;
   }
 }

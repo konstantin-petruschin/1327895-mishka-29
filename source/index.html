@@ -40,7 +40,7 @@
             <use xlink:href="img/sprites/sprites.svg#search"></use>
           </svg>
           <span class="main-nav__text-link main-nav__text-link--search">Поиск по сайту</span>
-        </a>
+                  </a>
         <a href="#" class="main-nav__link main-nav__link--card">
           <svg class="main-nav__icon" width="21" height="18" role="img">
             <use xlink:href="img/sprites/sprites.svg#cart"></use>
@@ -73,45 +73,47 @@
     </section>
     <section class="popular">
       <div class="popular__wrapper container">
+        <div class="popular__heading">
+          <h2 class="popular__title title title--min">Вязаные корзинки</h2>
+          <span class="popular__subtitle">Товар недели</span>
+        </div>
 
-        <h2 class="popular__title title title--min">Вязаные корзинки</h2>
-        <span class="popular__subtitle">Товар недели</span>
-          <p class="popular__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх
-            размерах.
-          </p>
-          <dl class="popular__list">
-            <div class="popular__characteristic">
-              <dt class="popular__name">Цвет:</dt>
-              <dd class="popular__value">тиффани/серый</dd>
-            </div>
-            <div class="popular__characteristic">
-              <dt class="popular__name">Диаметр:</dt>
-              <dd class="popular__value">25 см</dd>
-            </div>
-            <div class="popular__characteristic">
-              <dt class="popular__name">Высота:</dt>
-              <dd class="popular__value">15 см</dd>
-            </div>
-          </dl>
-          <div class="popular__image-wrapper">
-            <picture>
-              <source type="image/webp" media="(min-width: 1150px)"
-                srcset="./img/popular-desktop.webp 1x, ./img/popular-desktop@2x.webp 2x" width="525" height="636">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="./img/popular-tablet.webp 1x, ./img/popular-desktop@2x.webp 2x" width="334" height="404">
-              <source type="image/webp" srcset="./img/popular-mobile.webp 1x, ./img/popular-mobile@2x.webp 2x"
-                width="260" height="315">
-              <source media="(min-width: 1150px)" srcset="./img/popular-desktop.jpg 1x, ./img/popular-desktop@2x.jpg 2x"
-                width="525" height="636">
-              <source media="(min-width: 768px)" srcset="./img/popular-tablet.jpg 1x, ./img/popular-tablet@2x.jpg 2x"
-                width="334" height="404">
-              <img class="popular__img" src="./img/popular-mobile.jpg" srcset="./img/popular-mobile@2x.jpg 2x"
-                width="260" height="315" alt="Вязаные корзинки на ладони.">
-            </picture>
+        <p class="popular__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх
+          размерах.
+        </p>
+        <dl class="popular__list">
+          <div class="popular__characteristic">
+            <dt class="popular__name">Цвет:</dt>
+            <dd class="popular__value">тиффани/серый</dd>
           </div>
+          <div class="popular__characteristic">
+            <dt class="popular__name">Диаметр:</dt>
+            <dd class="popular__value">25 см</dd>
+          </div>
+          <div class="popular__characteristic">
+            <dt class="popular__name">Высота:</dt>
+            <dd class="popular__value">15 см</dd>
+          </div>
+        </dl>
+        <div class="popular__image-wrapper">
+          <picture>
+            <source type="image/webp" media="(min-width: 1150px)"
+              srcset="./img/popular-desktop.webp 1x, ./img/popular-desktop@2x.webp 2x" width="525" height="636">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="./img/popular-tablet.webp 1x, ./img/popular-desktop@2x.webp 2x" width="334" height="404">
+            <source type="image/webp" srcset="./img/popular-mobile.webp 1x, ./img/popular-mobile@2x.webp 2x" width="260"
+              height="315">
+            <source media="(min-width: 1150px)" srcset="./img/popular-desktop.jpg 1x, ./img/popular-desktop@2x.jpg 2x"
+              width="525" height="636">
+            <source media="(min-width: 768px)" srcset="./img/popular-tablet.jpg 1x, ./img/popular-tablet@2x.jpg 2x"
+              width="334" height="404">
+            <img class="popular__img" src="./img/popular-mobile.jpg" srcset="./img/popular-mobile@2x.jpg 2x" width="260"
+              height="315" alt="Вязаные корзинки на ладони.">
+          </picture>
+        </div>
 
-          <span class="popular__price">Цена: 990 руб.</span>
-          <a class="popular__link button button--primary" href="#">Заказать</a>
+        <span class="popular__price">Цена: 990 руб.</span>
+        <a class="popular__link button button--primary" href="#">Заказать</a>
 
       </div>
     </section>
@@ -159,40 +161,40 @@
     </section>
     <section class="address">
       <div class="address__wrapper">
-          <h2 class="address__title title title--min">Контакты</h2>
-          <div class="address__list">
-            <div class="address__item">
-              <span class="address__name">e-mail:</span>
-              <a class="address__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-            </div>
-            <div class="address__item">
-              <span class="address__name">адрес:</span>
-              <address class="address__value">Санкт-Петербург<br>ул. Большая Конюшенная<br>д. 19/8, офис 101</address>
-            </div>
+        <h2 class="address__title title title--min">Контакты</h2>
+        <div class="address__list">
+          <div class="address__item">
+            <span class="address__name">e-mail:</span>
+            <a class="address__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
           </div>
-
-          <div class="address__map map">
-            <h3 class="visually-hidden">Расположение магазина «Мишка» на карте.</h3>
-            <div class="map__image-wrapper">
-              <picture>
-                <source type="image/webp" media="(min-width: 1150px)"
-                  srcset="./img/map-desktop.webp 1x, ./img/map-desktop@2x.webp 2x" width="527" height="457">
-                <source type="image/webp" media="(min-width: 768px)"
-                  srcset="./img/map-tablet.webp 1x, ./img/map-tablet@2x.webp 2x" width="768" height="457">
-                <source type="image/webp" srcset="./img/map-mobile.webp 1x, ./img/map-mobile@2x.webp 2x" width="320"
-                  height="454">
-                <source media="(min-width: 1150px)" srcset="./img/map-desktop.jpg 1x, ./img/map-desktop@2x.jpg 2x"
-                  width="525" height="636">
-                <source media="(min-width: 768px)" srcset="./img/map-tablet.jpg 1x, ./img/map-tablet@2x.jpg 2x"
-                  width="768" height="457">
-                <img class="map__image" src="./img/map-mobile.jpg" srcset="./img/map-mobile@2x.jpg 2x" width="320"
-                  height="454" alt="Расположение на карте">
-              </picture>
-
-            </div>
-            <div class="map__yandex" id="map"></div>
+          <div class="address__item">
+            <span class="address__name">адрес:</span>
+            <address class="address__value">Санкт-Петербург<br>ул. Большая Конюшенная<br>д. 19/8, офис 101</address>
           </div>
-          <a class="address__button button button--primary" href="#">Напишите нам</a>
+        </div>
+
+        <div class="address__map map">
+          <h3 class="visually-hidden">Расположение магазина «Мишка» на карте.</h3>
+          <div class="map__image-wrapper">
+            <picture>
+              <source type="image/webp" media="(min-width: 1150px)"
+                srcset="./img/map-desktop.webp 1x, ./img/map-desktop@2x.webp 2x" width="527" height="457">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="./img/map-tablet.webp 1x, ./img/map-tablet@2x.webp 2x" width="768" height="457">
+              <source type="image/webp" srcset="./img/map-mobile.webp 1x, ./img/map-mobile@2x.webp 2x" width="320"
+                height="454">
+              <source media="(min-width: 1150px)" srcset="./img/map-desktop.jpg 1x, ./img/map-desktop@2x.jpg 2x"
+                width="525" height="636">
+              <source media="(min-width: 768px)" srcset="./img/map-tablet.jpg 1x, ./img/map-tablet@2x.jpg 2x"
+                width="768" height="457">
+              <img class="map__image" src="./img/map-mobile.jpg" srcset="./img/map-mobile@2x.jpg 2x" width="320"
+                height="454" alt="Расположение на карте">
+            </picture>
+
+          </div>
+          <div class="map__yandex" id="map"></div>
+        </div>
+        <a class="address__button button button--primary" href="#">Напишите нам</a>
 
       </div>
     </section>
