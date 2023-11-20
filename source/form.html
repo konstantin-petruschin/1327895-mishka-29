@@ -15,7 +15,7 @@
   <script src="./js/main.js" defer></script>
 </head>
 
-<body class="page__body page__body--index no-js">
+<body class="page__body no-js">
   <header class="main-header">
     <a href="index.html" class="main-header__logo">
       <picture>
@@ -67,50 +67,70 @@
       <form class="main-form__application form" action="https://echo.htmlacademy.ru/" method="get">
         <fieldset class="form__group container">
           <legend class="form__group-title">Тип</legend>
-          <label class="form__pick pick">
-            <input class="pick__input visually-hidden" type="radio" name="type" value="accessories" checked>
-            <span class="pick__mark pick__mark--checkbox"></span>
-            <span class="pick__name pick__name--checkbox">Аксессуар для интерьера</span>
-          </label>
-          <label class="form__pick pick">
-            <input class="pick__input visually-hidden" type="radio" name="type" value="toy" checked>
-            <span class="pick__mark pick__mark--checkbox"></span>
-            <span class="pick__name pick__name--checkbox">Детская игрушка</span>
-          </label>
+          <ul class="form__list form__list--type">
+            <li class="form__item">
+              <label class="form__pick pick">
+                <input class="pick__input visually-hidden" type="radio" name="type" value="accessories" checked>
+                <span class="pick__mark pick__mark--radio"></span>
+                <span class="pick__name pick__name--radio">Аксессуар для интерьера</span>
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__pick pick">
+                <input class="pick__input visually-hidden" type="radio" name="type" value="toy" checked>
+                <span class="pick__mark pick__mark--radio"></span>
+                <span class="pick__name pick__name--radio">Детская игрушка</span>
+              </label>
+            </li>
+          </ul>
         </fieldset>
         <div class="form__group-wrapper">
           <fieldset class="form__group container">
             <legend class="form__group-title">Цвет</legend>
-            <label class="form__pick pick">
-              <input class="pick__input visually-hidden" type="checkbox" name="type" value="accessories" checked>
-              <span class="pick__mark pick__mark--checkbox"></span>
-              <span class="pick__name pick__name--checkbox">Белый</span>
-            </label>
-            <label class="form__pick pick">
-              <input class="pick__input visually-hidden" type="checkbox" name="color" value="gray" checked>
-              <span class="pick__mark pick__mark--checkbox"></span>
-              <span class="pick__name pick__name--checkbox">Серый</span>
-            </label>
-            <label class="form__pick pick">
-              <input class="pick__input visually-hidden" type="checkbox" name="color" value="tiffany" checked>
-              <span class="pick__mark pick__mark--checkbox"></span>
-              <span class="pick__name pick__name--checkbox">Тиффани</span>
-            </label>
-            <label class="form__pick pick">
-              <input class="pick__input visually-hidden" type="checkbox" name="color" value="black" checked>
-              <span class="pick__mark pick__mark--checkbox"></span>
-              <span class="pick__name pick__name--checkbox">Черный</span>
-            </label>
-            <label class="form__pick pick">
-              <input class="pick__input visually-hidden" type="checkbox" name="color" value="pink" checked>
-              <span class="pick__mark pick__mark--checkbox"></span>
-              <span class="pick__name pick__name--checkbox">Розовый</span>
-            </label>
-            <label class="form__pick pick">
-              <input class="pick__input visually-hidden" type="checkbox" name="color" value="orange" checked>
-              <span class="pick__mark pick__mark--checkbox"></span>
-              <span class="pick__name pick__name--checkbox">Оранжевый</span>
-            </label>
+            <ul class="form__list form__list--color">
+              <li class="form__item">
+                <label class="form__pick pick">
+                  <input class="pick__input visually-hidden" type="checkbox" name="type" value="white" checked>
+                  <span class="pick__mark pick__mark--checkbox"></span>
+                  <span class="pick__name pick__name--checkbox">Белый</span>
+                </label>
+              </li>
+              <li class="form__item">
+                <label class="form__pick pick">
+                  <input class="pick__input visually-hidden" type="checkbox" name="color" value="gray" checked>
+                  <span class="pick__mark pick__mark--checkbox"></span>
+                  <span class="pick__name pick__name--checkbox">Серый</span>
+                </label>
+              </li>
+              <li class="form__item">
+                <label class="form__pick pick">
+                  <input class="pick__input visually-hidden" type="checkbox" name="color" value="tiffany" checked>
+                  <span class="pick__mark pick__mark--checkbox"></span>
+                  <span class="pick__name pick__name--checkbox">Тиффани</span>
+                </label>
+              </li>
+              <li class="form__item">
+                <label class="form__pick pick">
+                  <input class="pick__input visually-hidden" type="checkbox" name="color" value="black" checked>
+                  <span class="pick__mark pick__mark--checkbox"></span>
+                  <span class="pick__name pick__name--checkbox">Черный</span>
+                </label>
+              </li>
+              <li class="form__item">
+                <label class="form__pick pick">
+                  <input class="pick__input visually-hidden" type="checkbox" name="color" value="pink" checked>
+                  <span class="pick__mark pick__mark--checkbox"></span>
+                  <span class="pick__name pick__name--checkbox">Розовый</span>
+                </label>
+              </li>
+              <li class="form__item">
+                <label class="form__pick pick">
+                  <input class="pick__input visually-hidden" type="checkbox" name="color" value="orange" checked>
+                  <span class="pick__mark pick__mark--checkbox"></span>
+                  <span class="pick__name pick__name--checkbox">Оранжевый</span>
+                </label>
+              </li>
+            </ul>
           </fieldset>
         </div>
         <fieldset class="form__group form__group--name container">
@@ -147,16 +167,16 @@
           </fieldset>
         </div>
         <div class="form__container container">
-          <fieldset class="form__group">
+          <fieldset class="form__group form__group--coments">
             <legend class="form__group-title">Доп</legend>
             <textarea class="form__input-text input-text" type="text" name="comment"
               placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </fieldset>
-        <div class="form__footer">
-          <span class="form__info">*Поля обязательны для заполнения</span>
-          <button class="form__button button button--primary" type="submit">Отправить заказ</button>
+          <div class="form__footer">
+            <span class="form__info">*Поля обязательны для заполнения</span>
+            <button class="form__button button button--primary" type="submit">Отправить заказ</button>
+          </div>
         </div>
-      </div>
       </form>
     </section>
 

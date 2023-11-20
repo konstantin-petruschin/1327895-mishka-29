@@ -2,7 +2,11 @@
 @use "../mixins/media.scss" as m;
 
 .main-form__text {
-  text-align: center;
+  text-align: left;
+
+  @include m.desktop {
+    text-align: center;
+  }
 
   @include m.desktop {
     padding-left: 210px;
