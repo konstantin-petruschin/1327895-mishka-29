@@ -1,0 +1,27 @@
+@use "../common/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
+.form__group-wrapper {
+  background-color: v.$color-background;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+.form__group-title {
+  display: block;
+  position: relative;
+  padding-right: 30px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: v.$color-primary;
+  }
+}
