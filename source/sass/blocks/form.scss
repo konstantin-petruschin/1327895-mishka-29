@@ -2,6 +2,10 @@
 @use "../mixins/media.scss" as m;
 
 .form__group-wrapper {
+  &--contacts {
+    padding-bottom: 42px;
+  }
+
   @include m.tablet {
     background-color: v.$color-background;
   }
@@ -17,7 +21,15 @@
   padding-bottom: 0;
 
   &--coments {
-    padding: 0;
+    padding: 23px 0 17px;
+  }
+
+  &--name {
+    padding-bottom: 35px;
+  }
+
+  &--tel {
+    margin-bottom: 35px;
   }
 
   @include m.tablet {
@@ -35,6 +47,10 @@
   font-size: 17px;
   text-transform: uppercase;
   font-weight: 700;
+
+  &--name {
+    margin-bottom: 29px;
+  }
 
 
   &::after {
@@ -60,10 +76,14 @@
 
   &--type {
     gap: 16px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   &--color {
     gap: 23px;
+    padding-top: 25px;
+    padding-bottom: 33px;
   }
 }
 
@@ -88,6 +108,8 @@
 .form__input-text {
   &--comment {
     border: 2px solid v.$color-text;
+    padding: 17px;
+    height: 147px;
   }
 
   &--tel,
@@ -115,6 +137,13 @@
       background-image: url("../img/icons/mail-hover.svg");
     }
   }
+}
+
+.form__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-bottom: 55px;
 }
 
 .form__button {
