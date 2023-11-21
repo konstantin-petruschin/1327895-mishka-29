@@ -35,7 +35,7 @@
   display: block;
   width: 18px;
   height: 18px;
-  background-color: #62d1ba;
+  background-color: v.$color-input-hover;
   border-radius: 50%;
 }
 
@@ -49,7 +49,7 @@
 
 .pick__input:hover + .pick__mark,
 .pick__input:focus + .pick__mark {
-  border-color: #62d1ba;
+  border-color: v.$color-input-hover;
   outline: none;
 }
 
