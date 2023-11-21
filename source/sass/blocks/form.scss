@@ -19,6 +19,11 @@
   &--coments {
     padding: 0;
   }
+
+  @include m.tablet {
+    display: grid;
+    // grid-template-columns: 88px minmax(500px, auto);
+  }
 }
 
 .form__group-title {
@@ -83,6 +88,32 @@
 .form__input-text {
   &--comment {
     border: 2px solid v.$color-text;
+  }
+
+  &--tel,
+  &--mail {
+    background-repeat: no-repeat;
+    background-position: center right 7px;
+  }
+
+  &--tel {
+    background-image: url("../img/icons/phone.svg");
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-image: url("../img/icons/phone-hover.svg");
+    }
+  }
+
+  &--mail {
+    background-image: url("../img/icons/mail.svg");
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-image: url("../img/icons/mail-hover.svg");
+    }
   }
 }
 

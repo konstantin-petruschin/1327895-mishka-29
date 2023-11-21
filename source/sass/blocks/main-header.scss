@@ -50,13 +50,13 @@
     transform: translateX(-50%);
   }
 
-  &:hover,
+  &:hover[href],
   &:focus {
     opacity: 0.6;
     outline: none;
   }
 
-  &:active {
+  &:active[href] {
     opacity: 0.3;
   }
 }
