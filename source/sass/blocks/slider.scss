@@ -15,6 +15,11 @@
   margin: 0;
   padding: 0;
   margin-bottom: 33px;
+  padding-right: 65px;
+
+  @include m.desktop {
+    margin-bottom: 42px;
+  }
 }
 
 .slider__autor,
@@ -28,6 +33,10 @@
   margin: 0;
   padding: 0;
   margin-bottom: 10px;
+
+  @include m.desktop {
+    margin: 0;
+  }
 }
 
 .slider__autor-link {
@@ -48,6 +57,11 @@
     width: 137px;
     margin: 0;
     gap: 37px;
+  }
+
+  @include m.desktop {
+    bottom: 46px;
+    right: 20px;
   }
 }
 
@@ -84,5 +98,11 @@
     position: absolute;
     top: -70px;
     right: 0;
+  }
+
+  @include m.desktop {
+    top: -91px;
+    padding-left: 35px;
+    padding-right: 35px;
   }
 }

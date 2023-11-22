@@ -6,6 +6,7 @@
 
   @include m.desktop {
     padding-left: 50px;
+    padding-bottom: 53px;
   }
 }
 
@@ -17,9 +18,15 @@
 
   @include m.desktop {
     padding-left: 175px;
+    padding-top: 78px;
+    padding-bottom: 78px;
   }
 }
 
 .review__title {
   margin-bottom: 14px;
+
+  @include m.desktop {
+    margin-bottom: 35px;
+  }
 }

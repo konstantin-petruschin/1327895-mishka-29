@@ -24,7 +24,10 @@
   }
 
   @include m.desktop {
-    margin-top: -90px;
+    &::after {
+      height: 34px;
+      background: url("../img/promo-bottom-desktop.svg") repeat-x;
+    }
   }
 }
 
@@ -37,6 +40,10 @@
   @include m.tablet {
     min-height: 630px;
     padding-top: 158px;
+  }
+
+  @include m.desktop {
+    min-height: 627px;
   }
 }
 
@@ -77,6 +84,10 @@
   display: block;
   padding: 24px 160px 31px 30px;
 
+  @include m.desktop {
+    padding: 26px 160px 50px 37px;
+  }
+
   &::before {
     content: "";
     display: block;
@@ -99,13 +110,17 @@
     &::before {
       background-color: v.$color-primary;
     }
+  }
 
-    &::after {
-      width: 40px;
-      height: 62px;
-      top: 23px;
-      right: 36px;
-      background-image: url("../img/icons/interior.svg");
+  &--interior::after {
+    width: 40px;
+    height: 62px;
+    top: 23px;
+    right: 36px;
+    background-image: url("../img/icons/interior.svg");
+
+    @include m.desktop {
+      top: 30px;
     }
   }
 
@@ -115,13 +130,18 @@
     &::before {
       background-color: v.$color-secondary;
     }
+  }
 
-    &::after {
-      width: 60px;
-      height: 60px;
-      top: 23px;
-      right: 27px;
-      background-image: url("../img/icons/toy.svg");
+  &--toys::after {
+    width: 60px;
+    height: 60px;
+    top: 23px;
+    right: 27px;
+    background-image: url("../img/icons/toy.svg");
+
+    @include m.desktop {
+      top: 31px;
+      right: 35px;
     }
   }
 

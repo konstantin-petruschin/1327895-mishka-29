@@ -6,21 +6,24 @@
   flex-direction: column;
 
   @include m.tablet {
-    flex-direction: row;
-    justify-content: start;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
   }
 }
 
 .nav-basic__link {
   @include m.tablet {
     font-size: 15px;
+    padding: 33px 22px 33px 24px;
   }
 
   @include m.desktop {
     font-size: 17px;
+    padding-left: 35px;
+    padding-right: 35px;
   }
 
-  &--catalog {
+  &:nth-child(odd) {
     @include m.tablet {
       padding-left: 0;
     }

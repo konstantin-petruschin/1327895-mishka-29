@@ -26,5 +26,10 @@
 
   @include m.desktop {
     min-height: 255px;
+
+    &::after {
+      height: 34px;
+      background: url("../img/promo-bottom-desktop.svg") repeat-x;
+    }
   }
 }

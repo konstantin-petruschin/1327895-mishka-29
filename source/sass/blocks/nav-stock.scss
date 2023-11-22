@@ -5,13 +5,16 @@
   display: none;
 
   @include m.desktop {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min-content, max-content));
   }
 }
 
 .nav-stock__link {
   font-size: 15px;
+  padding: 19px 31px;
+
+  &:nth-child(3n+1) {
+    padding-left: 0;
+  }
 }

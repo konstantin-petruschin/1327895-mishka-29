@@ -1,6 +1,10 @@
 @use "../common/variables.scss" as v;
 @use "../mixins/media.scss" as m;
 
+.main-form__heading {
+  margin-top: -68px;
+}
+
 .main-form__text {
   text-align: left;
 

@@ -9,7 +9,8 @@
 
 .about__wrapper {
   @include m.desktop {
-    padding-left: 172px;
+    padding-left: 175px;
+    padding-top: 70px;
   }
 }
 
@@ -30,7 +31,8 @@
     column-gap: 70px;
 
     @include m.desktop {
-      column-gap: 85px;
+      column-gap: 90px;
+      margin-bottom: 90px;
     }
   }
 }
@@ -47,7 +49,7 @@
   @include m.tablet {
     font-size: 20px;
     line-height: 22px;
-    padding-top: 108px;
+    padding-top: 110px;
   }
 
   &--material {
@@ -56,7 +58,8 @@
     grid-row: 1 / 1;
 
     @include m.desktop {
-      background-position: left 5px top 47px;
+      padding-top: 80px;
+      background-position: left 8px top 23px;
     }
   }
 
@@ -67,7 +70,7 @@
     grid-row: 2 / 3;
 
     @include m.desktop {
-      background-position: left top 52px;
+      background-position: left top 56px;
     }
   }
 
@@ -78,7 +81,7 @@
     grid-row: 3 / 4;
 
     @include m.desktop {
-      background-position: left 4px top 60px;
+      background-position: left 8px top 62px;
     }
   }
 
@@ -89,7 +92,8 @@
     grid-row: 1 / 1;
 
     @include m.desktop {
-      background-position: left 5px top 52px;
+      padding-top: 80px;
+      background-position: left 3px top 27px;
     }
   }
 
@@ -100,13 +104,13 @@
     grid-row: 2 / 3;
 
     @include m.desktop {
-      background-position: left 4px top 52px;
+      background-position: left top 59px;
     }
   }
 
   &--packaging {
     background-image: url("../img/icons/present.svg");
-    background-position: left top 32px;
+    background-position: left 3px top 58px;
     grid-column: 2 / -2;
     grid-row: 3 / 4;
   }
