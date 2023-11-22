@@ -1,0 +1,32 @@
+@use "../common/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
+.nav-basic {
+  display: flex;
+  flex-direction: column;
+
+  @include m.tablet {
+    flex-direction: row;
+    justify-content: start;
+  }
+}
+
+.nav-basic__link {
+  @include m.tablet {
+    font-size: 15px;
+  }
+
+  @include m.desktop {
+    font-size: 17px;
+  }
+
+  &--catalog {
+    @include m.tablet {
+      padding-left: 0;
+    }
+
+    @include m.desktop {
+      border-right: 1px solid rgba(v.$color-title, $alpha: 0.1);
+    }
+  }
+}

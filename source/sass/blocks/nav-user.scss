@@ -1,0 +1,48 @@
+@use "../common/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
+.nav-user {
+  display: flex;
+  flex-direction: column;
+
+  @include m.tablet {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+.nav-user__link {
+  position: relative;
+
+  @include m.tablet {
+    font-size: 17px;
+
+    &--search {
+      border-left: 1px solid rgba(v.$color-title, $alpha: 0.1);
+      border-right: 1px solid rgba(v.$color-title, $alpha: 0.1);
+      width: 82px;
+      padding: 0;
+    }
+
+    &--card {
+      display: flex;
+      align-items: center;
+      padding-left: 83px;
+      padding-right: 0;
+    }
+  }
+}
+
+.nav-user__link-text {
+  @include m.tablet {
+    display: none;
+  }
+}
+
+.nav-user__icon {
+  color: v.$color-icon;
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+}

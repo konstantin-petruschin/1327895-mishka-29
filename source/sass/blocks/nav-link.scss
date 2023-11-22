@@ -1,0 +1,19 @@
+@use "../common/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
+
+.nav-link {
+  padding: 27px 30px 27px 76px;
+  text-decoration: none;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+  color: v.$color-title;
+  border-bottom: 1px solid v.$color-border;
+  width: 100%;
+
+  @include m.tablet {
+    border: none;
+    height: 100%;
+  }
+}
