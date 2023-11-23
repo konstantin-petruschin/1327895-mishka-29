@@ -20,6 +20,8 @@
     display: grid;
     grid-template-columns: 315px 142px 1fr;
     gap: 100px;
+    padding-top: 35px;
+    padding-bottom: 35px;
   }
 }
 
@@ -75,6 +77,11 @@
   @include m.tablet {
     border: none;
     justify-self: flex-end;
+  }
+
+  @include m.desktop {
+    padding-top: 10px;
+    padding-bottom: 19px;
   }
 }
 

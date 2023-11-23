@@ -14,6 +14,10 @@
   text-decoration: none;
   color: v.$color-text;
 
+  @include m.tablet {
+    font-size: 17px;
+  }
+
   &--primary {
     border: 2px solid v.$color-text;
     background-color: #ffffff;
