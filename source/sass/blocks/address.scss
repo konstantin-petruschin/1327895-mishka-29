@@ -2,24 +2,38 @@
 @use "../mixins/media.scss" as m;
 
 .address {
-  background: url("../img/zigzag-mobile.svg") top repeat-x;
-
   @include m.tablet {
-    background-image: url("../img/zigzag-tablet.svg");
     padding-top: 46px;
     padding-bottom: 57px;
   }
 
   @include m.desktop {
-    background-image: url("../img/zigzag-desktop.svg");
-    max-width: 1150px;
-    margin: 0 auto;
     padding: 71px 50px 45px;
   }
 }
 
 .address__wrapper {
+  margin: 0 auto;
+  background: url("../img/zigzag-mobile.svg") top repeat-x;
+
+  @include m.tablet {
+    background-image: url("../img/zigzag-tablet.svg");
+  }
+
+  @include m.desktop {
+    padding-top: 25px;
+    background-image: url("../img/zigzag-desktop.svg");
+    display: grid;
+    grid-template-columns: repeat(2, 527px);
+    justify-content: end;
+    max-width: v.$desktop;
+  }
+}
+
+.address__content {
   padding: 38px 30px  60px;
+  display: flex;
+  flex-direction: column;
 
   @include m.tablet {
     padding-left: 50px;
@@ -27,42 +41,37 @@
   }
 
   @include m.desktop {
-    padding-top: 25px;
     padding-left: 175px;
-    padding-right: 0;
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
-    display: grid;
-    grid-template-columns: auto 527px;
-    grid-template-rows: minmax(min-content, 136px) auto;
   }
 }
 
 .address__title {
   margin-bottom: 28px;
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include m.desktop {
+    margin: 0;
+    position: relative;
+  }
 
   &::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 47px;
-    height: 81px;
-    background-image: url("../img/flag.svg");
-    background-repeat: no-repeat;
+    @include m.tablet {
+      content: "";
+      display: block;
+      width: 47px;
+      height: 81px;
+      background-image: url("../img/flag.svg");
+      background-repeat: no-repeat;
+    }
 
     @include m.desktop {
+      position: absolute;
       left: -113px;
       top: 40%;
       transform: translateY(-50%);
     }
-  }
-
-  @include m.desktop {
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
-    margin: 0;
-    align-self: end;
   }
 }
 
@@ -138,6 +147,7 @@
     grid-row: 3 / 4;
     grid-column: 1 / 1;
     align-self: end;
-    margin: 0;
+    justify-self: end;
+    margin-right: 120px;
   }
 }
