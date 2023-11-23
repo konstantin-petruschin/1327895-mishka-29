@@ -18,6 +18,8 @@
 }
 
 .popular__wrapper {
+  text-align: left;
+
   @include m.tablet {
     display: grid;
     grid-template-columns: auto 334px;
@@ -66,10 +68,10 @@
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 17px;
-  text-align: center;
 
   @include m.tablet {
     max-width: 75px;
+    text-align: center;
   }
 
   @include m.desktop {
