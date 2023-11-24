@@ -92,6 +92,19 @@
   background-image: url("../img/icons/play.svg");
   background-repeat: no-repeat;
   background-size: auto;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2) translate(-40%, -40%);
+    transition: 0.3s;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transform: scale(0.8) translate(-60%, -60%);
+    transition: 0.3s;
+  }
 }
 
 .video-block__bottom {
