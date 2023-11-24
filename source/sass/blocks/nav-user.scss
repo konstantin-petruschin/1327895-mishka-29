@@ -27,9 +27,13 @@
     &--card {
       display: flex;
       align-items: center;
-      padding-left: 83px;
+      padding-left: 80px;
       padding-right: 0;
     }
+  }
+
+  @include m.desktop {
+    padding-left: 83px;
   }
 }
 

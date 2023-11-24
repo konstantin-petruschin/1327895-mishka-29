@@ -2,7 +2,9 @@
 @use "../mixins/media.scss" as m;
 
 .main-form__heading {
-  margin-top: -68px;
+  @include m.desktop {
+    margin-top: -68px;
+  }
 }
 
 .main-form__text {
