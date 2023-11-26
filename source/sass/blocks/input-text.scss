@@ -11,6 +11,10 @@
   border-bottom: 2px solid v.$color-title;
   background-color: transparent;
 
+  @include m.tablet {
+    padding-left: 16px;
+  }
+
   &::placeholder {
     color: rgba(0, 0, 0, 0.3);
   }

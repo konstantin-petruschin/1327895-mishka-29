@@ -10,7 +10,6 @@
 
   @include m.tablet {
     min-height: 226px;
-    padding: 100px;
 
     &::after {
       content: "";
@@ -29,7 +28,6 @@
 
     &::after {
       height: 34px;
-      background: url("../img/promo-bottom-desktop.svg") repeat-x;
     }
   }
 }
