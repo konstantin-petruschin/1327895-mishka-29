@@ -2,22 +2,26 @@
 @use "../mixins/media.scss" as m;
 
 .modal {
-  // display: none;
+  display: none;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.3);
 
   &--open {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     display: flex;
     justify-content: center;
-    z-index: 10;
+    z-index: 20;
   }
 }
 
 .modal__container {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  right: 0;
   width: 100%;
   margin: auto;
   background-color: #ffffff;
@@ -28,6 +32,7 @@
   border: 1px solid #c6c6c6;
   box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
   padding: 28px 30px 46px;
+  z-index: 20;
 
   @include m.tablet {
     max-width: 566px;

@@ -29,12 +29,30 @@
   }
 }
 
+.card__link-image {
+  @include m.tablet {
+    width: 50%;
+  }
+
+  @include m.desktop {
+    width: auto;
+  }
+}
+
 .card__image {
   display: block;
 }
 
 .card__wrapper {
   padding: 24px 20px 26px;
+
+  @include m.tablet {
+    width: 50%;
+  }
+
+  @include m.desktop {
+    width: auto;
+  }
 }
 
 .card__description {

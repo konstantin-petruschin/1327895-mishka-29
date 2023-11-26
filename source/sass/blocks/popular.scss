@@ -30,7 +30,7 @@
   @include m.desktop {
     padding-left: 50px;
     padding-right: 50px;
-    grid-template-columns: 110px 292px 525px;
+    grid-template-columns: 115px 292px 525px;
     grid-template-rows: minmax(57px auto) auto auto;
     column-gap: 59px;
   }
@@ -55,6 +55,7 @@
     flex-direction: row-reverse;
     justify-content: flex-start;
     justify-self: start;
+    align-items: flex-start;
     gap: 43px;
     grid-row: 1 / 2;
     grid-column: 1 / -1;
@@ -74,6 +75,10 @@
     max-width: 75px;
     text-align: center;
     margin: 0;
+  }
+
+  @include m.desktop {
+    margin-left: 45px;
   }
 }
 

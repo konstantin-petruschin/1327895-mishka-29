@@ -15,8 +15,7 @@
   display: flex;
   flex-direction: column;
   border: none;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0 auto;
   padding-top: 0;
   padding-bottom: 0;
 
@@ -38,15 +37,12 @@
   }
 
   &--coments {
-    padding: 23px 0 17px;
+    padding-top: 23px;
+    padding-bottom: 17px;
   }
 
   &--name {
     padding-bottom: 35px;
-  }
-
-  &--tel {
-    margin-bottom: 35px;
   }
 }
 
@@ -141,7 +137,7 @@
   &--comment {
     border: 2px solid v.$color-text;
     padding: 17px;
-    height: 147px;
+    min-height: 147px;
   }
 
   &--tel,
@@ -176,8 +172,23 @@
   flex-direction: column;
   gap: 30px;
   padding-bottom: 55px;
+
+  @include m.tablet {
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @include m.desktop {
+    padding-left: 218px;
+  }
 }
 
 .form__button {
   width: 100%;
+
+  @include m.tablet {
+    width: auto;
+  }
 }

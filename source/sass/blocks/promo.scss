@@ -3,14 +3,7 @@
 
 .promo {
   position: relative;
-  background-image: url("../img/hero-mobile.png");
-  background-repeat: no-repeat;
-  background-size: 100%, auto;
-
-  @include m.tablet {
-    background-image: url("../img/hero-desktop.png");
-    margin-top: -70px;
-  }
+  background-color: #f9f9f9;
 
   &::after {
     @include m.tablet {
@@ -27,6 +20,18 @@
     @include m.desktop {
       height: 34px;
     }
+  }
+}
+
+.promo__wrapper {
+  background-image: url("../img/hero-mobile.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+
+  @include m.tablet {
+    background-image: url("../img/hero-desktop.png");
+    margin-top: -70px;
   }
 }
 
