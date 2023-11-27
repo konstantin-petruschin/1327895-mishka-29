@@ -265,3 +265,35 @@
       </a>
     </div>
   </footer>
+  <!-- Модальные окна -->
+  <!-- добавить класс modal--open для проверки модального окна-->
+  <div class="modal">
+    <div class="modal__container">
+      <p class="modal__title">Добавить в корзину</p>
+      <span class="modal__text">Выберите размер:</span>
+      <form class="modal__form" action="https://echo.htmlacademy.ru/" method="get">
+        <ul class="modal__list">
+          <li class="modal__item">
+            <label class="modal__label">
+              <input class="modal__input visually-hidden" type="radio" name="size" value="size-s" checked>
+              <span class="modal__size">S</span>
+            </label>
+          </li>
+          <li class="modal__item">
+            <label class="modal__label">
+              <input class="modal__input visually-hidden" type="radio" name="size" value="size-s">
+              <span class="modal__size">M</span>
+            </label>
+          </li>
+          <li class="modal__item">
+            <label class="modal__label">
+              <input class="modal__input visually-hidden" type="radio" name="size" value="size-s">
+              <span class="modal__size">L</span>
+            </label>
+          </li>
+        </ul>
+        <button class="modal__button button button--secondary" type="submit">Добавить</button>
+      </form>
+    </div>
+  </div>
+</body>

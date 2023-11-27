@@ -1,15 +1,9 @@
 @use "../common/variables.scss" as v;
 @use "../mixins/media.scss" as m;
 
-.about {
-  @include m.desktop {
-    padding-left: 50px;
-  }
-}
-
 .about__wrapper {
   @include m.desktop {
-    padding-left: 175px;
+    padding-left: 226px;
     padding-top: 70px;
   }
 }
