@@ -37,6 +37,15 @@
   }
 }
 
+.nav-user__link:hover .nav-user__icon,
+.nav-user__link:focus .nav-user__icon {
+  color: v.$color-primary;
+}
+
+.nav-user__link:focus .nav-user__icon {
+  opacity: 0.3;
+}
+
 .nav-user__link-text {
   @include m.tablet {
     display: none;

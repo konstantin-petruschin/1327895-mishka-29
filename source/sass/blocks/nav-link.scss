@@ -16,4 +16,14 @@
     border: none;
     height: 100%;
   }
+
+  &:hover,
+  &:focus {
+    color: rgba(v.$color-title, $alpha: 0.6);
+    outline: none;
+  }
+
+  &:active {
+    color: rgba(v.$color-title, $alpha: 0.3);
+  }
 }
