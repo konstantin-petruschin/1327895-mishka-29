@@ -151,7 +151,7 @@
 
   &:hover {
     padding-top: 19px;
-    padding-bottom: 36px;
+    padding-bottom: 55px;
   }
 }
 
@@ -161,4 +161,8 @@
 
 .promo__assortment-link:hover::after {
   top: 18px;
+}
+
+.promo__assortment-link:active::after {
+  opacity: 0.3;
 }
