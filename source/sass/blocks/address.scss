@@ -14,15 +14,9 @@
 
 .address__wrapper {
   margin: 0 auto;
-  background: url("../img/zigzag-mobile.svg") top repeat-x;
-
-  @include m.tablet {
-    background-image: url("../img/zigzag-tablet.svg");
-  }
 
   @include m.desktop {
     padding-top: 25px;
-    background-image: url("../img/zigzag-desktop.svg");
     display: grid;
     grid-template-columns: repeat(2, 527px);
     justify-content: end;
