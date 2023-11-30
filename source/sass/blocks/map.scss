@@ -1,7 +1,20 @@
 @use "../common/variables.scss" as v;
 @use "../mixins/media.scss" as m;
 
-.map__image {
+.map__image,
+.map__yandex {
   width: 100%;
-  display: block;
+  height: 454px;
+
+  @include m.tablet {
+    height: 457px;
+  }
+
+  @include m.desktop {
+    height: 457px;
+  }
+}
+
+.map__image {
+  display: none;
 }

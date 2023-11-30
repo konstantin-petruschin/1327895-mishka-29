@@ -30,6 +30,7 @@ img {
 }
 
 .page__body {
+  position: relative;
   margin: 0;
   padding: 0;
   font-family: "Open Sans", "Arial", sans-serif;
@@ -63,14 +64,31 @@ img {
   padding-right: 30px;
 
   @include m.tablet {
-    max-width: v.$tablet;
+    min-width: v.$tablet;
     padding-left: 50px;
     padding-right: 50px;
   }
 
   @include m.desktop {
     max-width: v.$desktop;
-    padding-left: 110px;
-    padding-right: 110px;
+  }
+}
+
+.no-js {
+  .main-nav {
+    display: block;
+    position: static;
+  }
+
+  .main-header__logo {
+    display: none;
+  }
+
+  .map__image {
+    display: block;
+  }
+
+  .map__yandex {
+    display: none;
   }
 }

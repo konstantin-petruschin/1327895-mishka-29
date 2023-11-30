@@ -1,0 +1,22 @@
+@use "../common/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
+.main-form__heading {
+  @include m.tablet {
+    margin-top: -68px;
+  }
+}
+
+.main-form__text {
+  text-align: left;
+
+  @include m.desktop {
+    text-align: center;
+  }
+
+  @include m.desktop {
+    padding-left: 210px;
+    padding-right: 210px;
+    text-align: left;
+  }
+}

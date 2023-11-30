@@ -1,0 +1,231 @@
+@use "../common/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
+.form__group-wrapper {
+  @include m.tablet {
+    background-color: v.$color-background;
+  }
+
+  &--contacts {
+    padding-bottom: 42px;
+
+    @include m.desktop {
+      padding-top: 65px;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  margin: 0 auto;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  @include m.tablet {
+    display: grid;
+    gap: 80px;
+    grid-template-columns: 88px auto;
+    padding-bottom: 50px;
+  }
+
+  &--type {
+    @include m.tablet {
+      padding-top: 63px;
+    }
+  }
+
+  &--color {
+    padding-top: 50px;
+  }
+
+  &--coments {
+    padding-top: 23px;
+    padding-bottom: 17px;
+
+    @include m.desktop {
+      padding-top: 50px;
+      padding-bottom: 53px;
+    }
+  }
+
+  &--name {
+    padding-bottom: 35px;
+
+    @include m.desktop {
+      padding-top: 67px;
+    }
+  }
+
+  &--contacts {
+    @include m.tablet {
+      display: flex;
+    }
+  }
+}
+
+.form__group-title {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  color: v.$color-primary;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  &--name {
+    margin-bottom: 29px;
+  }
+
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #61d1bb;
+
+    @include m.tablet {
+      display: none;
+    }
+  }
+
+  @include m.tablet {
+    align-self: start;
+  }
+
+  &--contact {
+    @include m.tablet {
+      align-self: center;
+    }
+  }
+}
+
+.form__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+
+  &--type {
+    gap: 16px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &--color {
+    gap: 23px;
+    padding-top: 25px;
+    padding-bottom: 33px;
+
+    @include m.tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include m.desktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @include m.tablet {
+    padding: 0;
+  }
+}
+
+.form__label {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include m.tablet {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+.form__name {
+  color: v.$color-title;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.form__contact {
+  display: flex;
+  flex-direction: column;
+
+  @include m.tablet {
+    display: grid;
+    gap: 80px;
+    grid-template-columns: 88px auto;
+  }
+}
+
+.form__input-text {
+  &--comment {
+    border: 2px solid v.$color-text;
+    padding: 17px;
+    min-height: 147px;
+  }
+
+  &--tel,
+  &--mail {
+    background-repeat: no-repeat;
+    background-position: center right 7px;
+  }
+
+  &--tel {
+    background-image: url("../img/icons/phone.svg");
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-image: url("../img/icons/phone-hover.svg");
+    }
+  }
+
+  &--mail {
+    background-image: url("../img/icons/mail.svg");
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-image: url("../img/icons/mail-hover.svg");
+    }
+  }
+}
+
+.form__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-bottom: 55px;
+
+  @include m.tablet {
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @include m.desktop {
+    padding-left: 218px;
+  }
+}
+
+.form__button {
+  width: 100%;
+
+  @include m.tablet {
+    width: auto;
+  }
+}

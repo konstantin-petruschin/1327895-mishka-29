@@ -1,0 +1,84 @@
+@use "../common/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid v.$color-border;
+
+  @include m.tablet {
+    flex-direction: row;
+  }
+
+  @include m.desktop {
+    flex-direction: column;
+  }
+}
+
+.card__name {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+  color: v.$color-title;
+  text-decoration: none;
+  margin-bottom: 10px;
+
+  @include m.tablet {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.card__link-image {
+  @include m.tablet {
+    width: 50%;
+  }
+
+  @include m.desktop {
+    width: auto;
+  }
+}
+
+.card__image {
+  display: block;
+}
+
+.card__wrapper {
+  padding: 24px 20px 26px;
+
+  @include m.tablet {
+    width: 50%;
+  }
+
+  @include m.desktop {
+    width: auto;
+  }
+}
+
+.card__description {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid v.$color-border;
+  padding-bottom: 18px;
+  margin-bottom: 22px;
+  min-height: 82px;
+
+  @include m.tablet {
+    min-height: 210px;
+  }
+
+  @include m.desktop {
+    min-height: 118px;
+  }
+}
+
+.card__buy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__icon {
+  color: v.$color-icon;
+}

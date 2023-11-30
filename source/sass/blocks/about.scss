@@ -1,6 +1,13 @@
 @use "../common/variables.scss" as v;
 @use "../mixins/media.scss" as m;
 
+.about__wrapper {
+  @include m.desktop {
+    padding-left: 226px;
+    padding-top: 70px;
+  }
+}
+
 .about__title {
   margin-bottom: 14px;
 }
@@ -10,83 +17,95 @@
   margin: 0;
   padding: 0;
   margin-bottom: 58px;
+
+  @include m.tablet {
+    display: grid;
+    grid-template-columns: 260px 325px;
+    grid-template-rows: repeat(3, auto);
+    column-gap: 70px;
+
+    @include m.desktop {
+      column-gap: 90px;
+      margin-bottom: 90px;
+    }
+  }
 }
 
 .about__item {
-  display: flex;
-  flex-direction: column;
+  padding-top: 83px;
   color: v.$color-title;
   font-size: 17px;
+  line-height: 20px;
   font-weight: 700;
+  background-repeat: no-repeat;
+  background-position: left top 20px;
+
+  @include m.tablet {
+    font-size: 20px;
+    line-height: 22px;
+    padding-top: 110px;
+  }
 
   &--material {
-    gap: 16px;
-    margin-bottom: 30px;
+    background-image: url("../img/icons/flower.svg");
+    grid-column: 1 / 2;
+    grid-row: 1 / 1;
+
+    @include m.desktop {
+      padding-top: 80px;
+      background-position: left 8px top 23px;
+    }
   }
 
   &--price {
-    gap: 26px;
-    margin-bottom: 35px;
+    background-image: url("../img/icons/price.svg");
+    background-position: left top 30px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    @include m.desktop {
+      background-position: left top 56px;
+    }
   }
 
   &--likes {
-    gap: 21px;
-    margin-bottom: 32px;
+    background-image: url("../img/icons/like.svg");
+    background-position: left top 35px;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+
+    @include m.desktop {
+      background-position: left 8px top 62px;
+    }
   }
 
   &--handmade {
-    gap: 17px;
-    margin-bottom: 33px;
+    background-image: url("../img/icons/skein.svg");
+    background-position: left top 32px;
+    grid-column: 2 / -2;
+    grid-row: 1 / 1;
+
+    @include m.desktop {
+      padding-top: 80px;
+      background-position: left 3px top 27px;
+    }
   }
 
   &--support {
-    gap: 26px;
-    margin-bottom: 32px;
+    background-image: url("../img/icons/rocket.svg");
+    background-position: left top 33px;
+    grid-column: 2 / -2;
+    grid-row: 2 / 3;
+
+    @include m.desktop {
+      background-position: left top 59px;
+    }
   }
 
   &--packaging {
-    gap: 20px;
-  }
-
-  &::before {
-    content: "";
-    display: block;
-    background-repeat: no-repeat;
-  }
-
-  &--material::before {
-    background-image: url("../img/icons/flower.svg");
-    width: 33px;
-    height: 38px;
-  }
-
-  &--price::before {
-    background-image: url("../img/icons/price.svg");
-    width: 47px;
-    height: 27px;
-  }
-
-  &--likes::before {
-    background-image: url("../img/icons/like.svg");
-    width: 34px;
-    height: 27px;
-  }
-
-  &--handmade::before {
-    background-image: url("../img/icons/skein.svg");
-    width: 35px;
-    height: 34px;
-  }
-
-  &--support::before {
-    background-image: url("../img/icons/rocket.svg");
-    width: 55px;
-    height: 23px;
-  }
-
-  &--packaging::before {
     background-image: url("../img/icons/present.svg");
-    width: 33px;
-    height: 32px;
+    background-position: left 3px top 58px;
+    grid-column: 2 / -2;
+    grid-row: 3 / 4;
   }
 }

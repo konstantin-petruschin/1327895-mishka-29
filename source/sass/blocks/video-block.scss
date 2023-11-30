@@ -1,0 +1,130 @@
+@use "../common/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
+.video-block {
+  margin-bottom: 58px;
+}
+
+.video-block__card {
+  border: 1px solid v.$color-border;
+  padding-top: 21px;
+  padding-bottom: 33px;
+  display: grid;
+
+  @include m.tablet {
+    grid-template-rows: repeat(2, auto);
+    padding-top: 0;
+  }
+
+  @include m.desktop {
+    padding: 0;
+    grid-template-columns: 683px 230px;
+    grid-template-rows: repeat(2, auto);
+    column-gap: 79px;
+  }
+}
+
+.video-block__name {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 36px;
+
+  &::before {
+    content: "";
+    background-image: url("../img/icons/video-icon.svg");
+    background-repeat: no-repeat;
+    display: block;
+    width: 32px;
+    height: 22px;
+  }
+
+  @include m.tablet {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  @include m.desktop {
+    flex-direction: column;
+    align-items: flex-start;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin-top: 50px;
+  }
+}
+
+.video-block__wrapper {
+  position: relative;
+  margin-bottom: 35px;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+
+  @include m.tablet {
+    margin: 0;
+    border-bottom: 1px solid v.$color-border;
+  }
+
+  @include m.desktop {
+    border: none;
+  }
+}
+
+.video-block__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.video-block__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  width: 101px;
+  height: 77px;
+  background-color: transparent;
+  background-image: url("../img/icons/play.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2) translate(-40%, -40%);
+    transition: 0.3s;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transform: scale(0.8) translate(-60%, -60%);
+    transition: 0.3s;
+  }
+}
+
+.video-block__bottom {
+  padding-left: 33px;
+  padding-right: 33px;
+
+  @include m.desktop {
+    padding: 0;
+  }
+}
+
+.video-block__text {
+  margin: 0;
+  padding: 0;
+
+  @include m.tablet {
+    font-size: 15px;
+  }
+
+  @include m.desktop {
+    margin-bottom: 45px;
+  }
+}

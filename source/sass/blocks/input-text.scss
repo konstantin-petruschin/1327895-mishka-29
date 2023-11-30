@@ -1,0 +1,31 @@
+@use "../common/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
+.input-text {
+  width: 100%;
+  padding: 17px 40px 17px 0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 17px;
+  color: v.$color-text;
+  border: none;
+  border-bottom: 2px solid v.$color-title;
+  background-color: transparent;
+
+  @include m.tablet {
+    padding-left: 16px;
+  }
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &:hover,
+  &:focus {
+    border-color: v.$color-input-hover;
+    outline: none;
+  }
+
+  &:not(:placeholder-shown):invalid {
+    border-color: #ff8282;
+  }
+}
