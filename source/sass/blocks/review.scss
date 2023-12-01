@@ -1,16 +1,9 @@
 @use "../common/variables.scss" as v;
 @use "../mixins/media.scss" as m;
 
-.review {
-  padding-bottom: 45px;
-
-  @include m.desktop {
-    padding-bottom: 0;
-  }
-}
-
 .review__wrapper {
   position: relative;
+  padding-bottom: 49px;
 
   @include m.tablet {
     background-image: url("..//img/review-background.jpg");

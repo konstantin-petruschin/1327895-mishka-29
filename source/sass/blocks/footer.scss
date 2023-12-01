@@ -43,16 +43,17 @@
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  gap: 33px;
-  width: 145px;
+  gap: 34px;
   list-style: none;
   padding: 0;
   margin: 0;
-  padding-top: 25px;
+  padding-top: 30px;
   padding-bottom: 30px;
 
   @include m.tablet {
     justify-self: center;
+    padding-top: 25px;
+    width: 145px;
   }
 }
 

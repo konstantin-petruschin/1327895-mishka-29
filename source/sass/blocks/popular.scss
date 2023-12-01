@@ -2,8 +2,7 @@
 @use "../mixins/media.scss" as m;
 
 .popular {
-  padding-top: 27px;
-  padding-bottom: 36px;
+  padding-top: 33px;
 
   @include m.desktop {
     padding-top: 54px;
@@ -14,6 +13,7 @@
 .popular__wrapper {
   text-align: left;
   position: relative;
+  padding-bottom: 40px;
 
   @include m.tablet {
     display: grid;
@@ -40,6 +40,7 @@
     display: block;
     background: url("../img/zigzag-mobile.svg") bottom repeat-x;
     bottom: 0;
+    left: 0;
 
 
     @include m.tablet {
@@ -57,6 +58,7 @@
 .popular__heading {
   display: flex;
   flex-direction: column;
+  gap: 3px;
 
   @include m.tablet {
     position: relative;
@@ -88,7 +90,7 @@
   line-height: 17px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 17px;
+  margin-bottom: 20px;
 
   @include m.tablet {
     max-width: 75px;
@@ -118,11 +120,12 @@
 .popular__text {
   margin: 0;
   padding: 0;
-  margin-bottom: 49px;
+  margin-bottom: 22px;
   line-height: 24px;
 
   @include m.tablet {
     line-height: 30px;
+    margin-bottom: 49px;
   }
 }
 
@@ -136,9 +139,9 @@
 .popular__item {
   display: flex;
   border-bottom: 1px solid v.$color-border;
-  column-gap: 20px;
+  column-gap: 18px;
   padding-top: 5px;
-  padding-bottom: 5px;
+  padding-bottom: 14px;
 
   @include m.tablet {
     padding-top: 7px;
@@ -156,9 +159,12 @@
 }
 
 .popular__image-wrapper {
+  margin-bottom: 26px;
+
   @include m.tablet {
     grid-row: 2 / 4;
     grid-column: 2 / 3;
+    margin: 0;
   }
 
   @include m.desktop {
@@ -197,6 +203,7 @@
 .popular__price {
   text-align: center;
   font-weight: 700;
+  font-size: 17px;
 
   @include m.tablet {
     font-size: 20px;

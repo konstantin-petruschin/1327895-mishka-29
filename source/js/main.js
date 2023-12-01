@@ -20,7 +20,7 @@ if (mapWrapper) {
 
 function init() {
   const myMap = new ymaps.Map('map', {
-    center: [59.938631, 30.323037],
+    center: [59.93873, 30.32285],
     zoom: 17
   });
 

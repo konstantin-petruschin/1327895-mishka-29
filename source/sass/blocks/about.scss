@@ -2,6 +2,8 @@
 @use "../mixins/media.scss" as m;
 
 .about__wrapper {
+  padding-top: 32px;
+
   @include m.desktop {
     padding-left: 226px;
     padding-top: 70px;
@@ -47,7 +49,9 @@
   }
 
   &--material {
+    padding-top: 68px;
     background-image: url("../img/icons/flower.svg");
+    background-position: left 8px top 13px;
     grid-column: 1 / 2;
     grid-row: 1 / 1;
 
@@ -70,7 +74,7 @@
 
   &--likes {
     background-image: url("../img/icons/like.svg");
-    background-position: left top 35px;
+    background-position: left 7px top 34px;
     grid-column: 1 / 2;
     grid-row: 3 / 4;
 
@@ -81,7 +85,7 @@
 
   &--handmade {
     background-image: url("../img/icons/skein.svg");
-    background-position: left top 32px;
+    background-position: left 2px top 32px;
     grid-column: 2 / -2;
     grid-row: 1 / 1;
 
@@ -104,8 +108,12 @@
 
   &--packaging {
     background-image: url("../img/icons/present.svg");
-    background-position: left 3px top 58px;
+    background-position: left 3px top 30px;
     grid-column: 2 / -2;
     grid-row: 3 / 4;
+
+    @include m.desktop {
+      background-position: left 3px top 58px;
+    }
   }
 }

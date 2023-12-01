@@ -29,8 +29,7 @@
 .promo__wrapper {
   background-image: url("../img/hero-mobile.png");
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top;
+  background-position: top -18px center;
 
   @include m.tablet {
     background-image: url("../img/hero-desktop.png");
@@ -39,10 +38,10 @@
 }
 
 .promo__text {
-  padding-top: 73px;
+  padding-top: 72px;
   padding-bottom: 20px;
   text-align: center;
-  min-height: 330px;
+  min-height: 281px;
 
   @include m.tablet {
     min-height: 630px;
