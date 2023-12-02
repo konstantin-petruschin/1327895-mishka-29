@@ -17,6 +17,10 @@
   margin-bottom: 33px;
   line-height: 30px;
 
+  @include m.tablet {
+    margin-bottom: 58px;
+  }
+
   @include m.desktop {
     margin-bottom: 42px;
     padding-right: 65px;
@@ -35,8 +39,13 @@
   padding: 0;
   margin-bottom: 6px;
 
-  @include m.desktop {
+  @include m.tablet {
+    font-size: 18px;
     margin: 0;
+  }
+
+  @include m.desktop {
+    font-size: 17px;
   }
 }
 
@@ -53,15 +62,15 @@
 
   @include m.tablet {
     position: absolute;
-    bottom: 50px;
-    right: 0;
+    bottom: 46px;
+    right: 19px;
     width: 137px;
     margin: 0;
     gap: 37px;
   }
 
   @include m.desktop {
-    bottom: 46px;
+    bottom: 48px;
     right: 20px;
   }
 }
@@ -70,15 +79,8 @@
   border: 1px solid v.$color-border;
   background-image: url("../img/icons/next.svg");
   background-repeat: no-repeat;
-
   background-color: transparent;
   height: 53px;
-
-  @include m.tablet {
-    border: none;
-    height: 26px;
-    background-position: center;
-  }
 
   &--prev {
     border-left: none;
@@ -88,6 +90,12 @@
 
   &--next {
     background-position: center left 36px;
+  }
+
+  @include m.tablet {
+    border: none;
+    height: 26px;
+    background-position: center left;
   }
 
   &:hover {
@@ -102,8 +110,9 @@
 .slider__button {
   @include m.tablet {
     position: absolute;
-    top: -70px;
+    top: -93px;
     right: 0;
+    min-width: 175px;
   }
 
   @include m.desktop {

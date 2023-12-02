@@ -12,8 +12,10 @@
 
   @include m.tablet {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 100px;
+    padding-top: 34px;
+    padding-bottom: 32px;
+    grid-template-columns: 143px 142px 1fr;
+    gap: 84px;
   }
 
   @include m.desktop {
@@ -54,6 +56,7 @@
     justify-self: center;
     padding-top: 25px;
     width: 145px;
+    gap: 32px;
   }
 }
 
@@ -78,6 +81,7 @@
   @include m.tablet {
     border: none;
     justify-self: flex-end;
+    padding-top: 15px;
   }
 
   @include m.desktop {

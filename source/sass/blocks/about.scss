@@ -3,10 +3,17 @@
 
 .about__wrapper {
   padding-top: 32px;
+  padding-bottom: 58px;
+
+  @include m.tablet {
+    padding-top: 57px;
+    padding-bottom: 83px;
+  }
 
   @include m.desktop {
     padding-left: 226px;
-    padding-top: 70px;
+    padding-top: 67px;
+    padding-bottom: 90px;
   }
 }
 
@@ -18,17 +25,15 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-bottom: 58px;
 
   @include m.tablet {
     display: grid;
     grid-template-columns: 260px 325px;
     grid-template-rows: repeat(3, auto);
-    column-gap: 70px;
+    column-gap: 75px;
 
     @include m.desktop {
       column-gap: 90px;
-      margin-bottom: 90px;
     }
   }
 }
@@ -55,8 +60,13 @@
     grid-column: 1 / 2;
     grid-row: 1 / 1;
 
+    @include m.tablet {
+      padding-top: 83px;
+      background-position: left 8px top 26px;
+    }
+
     @include m.desktop {
-      padding-top: 80px;
+      padding-top: 82px;
       background-position: left 8px top 23px;
     }
   }
@@ -66,6 +76,10 @@
     background-position: left top 30px;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+
+    @include m.tablet {
+      background-position: left top 55px;
+    }
 
     @include m.desktop {
       background-position: left top 56px;
@@ -78,6 +92,10 @@
     grid-column: 1 / 2;
     grid-row: 3 / 4;
 
+    @include m.tablet {
+      background-position: left 7px top 62px;
+    }
+
     @include m.desktop {
       background-position: left 8px top 62px;
     }
@@ -89,8 +107,13 @@
     grid-column: 2 / -2;
     grid-row: 1 / 1;
 
+    @include m.tablet {
+      padding-top: 84px;
+      background-position: left 3px top 30px;
+    }
+
     @include m.desktop {
-      padding-top: 80px;
+      padding-top: 82px;
       background-position: left 3px top 27px;
     }
   }
@@ -101,7 +124,7 @@
     grid-column: 2 / -2;
     grid-row: 2 / 3;
 
-    @include m.desktop {
+    @include m.tablet {
       background-position: left top 59px;
     }
   }
@@ -111,6 +134,10 @@
     background-position: left 3px top 30px;
     grid-column: 2 / -2;
     grid-row: 3 / 4;
+
+    @include m.tablet {
+      background-position: left 1px top 58px;
+    }
 
     @include m.desktop {
       background-position: left 3px top 58px;
