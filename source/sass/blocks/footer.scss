@@ -20,7 +20,7 @@
 
   @include m.desktop {
     display: grid;
-    grid-template-columns: 315px 142px 1fr;
+    grid-template-columns: 315px 142px 393px;
     gap: 100px;
     padding-top: 35px;
     padding-bottom: 35px;
@@ -88,6 +88,7 @@
   @include m.desktop {
     padding-top: 10px;
     padding-bottom: 19px;
+    gap: 29px;
   }
 }
 

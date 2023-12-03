@@ -38,7 +38,10 @@
   }
 
   @include m.desktop {
+    display: flex;
+    flex-direction: column;
     width: auto;
+    padding-left: 28px;
   }
 }
 
@@ -64,8 +67,8 @@
   flex-direction: column;
   border-bottom: 1px solid v.$color-border;
   padding-bottom: 18px;
-  margin-bottom: 22px;
-  min-height: 78px;
+  margin-bottom: 23px;
+  min-height: 76px;
 
   @include m.tablet {
     min-height: 236px;
@@ -73,12 +76,16 @@
   }
 
   @include m.desktop {
-    min-height: 118px;
+    min-height: 98px;
   }
 }
 
 .card__characteristic {
-  font-size: 15px;
+  font-size: 13px;
+
+  @include m.tablet {
+    font-size: 15px;
+  }
 }
 
 .card__buy {

@@ -37,12 +37,8 @@
     }
   }
 
-  &--color {
-    padding-top: 50px;
-  }
-
-  &--coments {
-    padding-top: 23px;
+  &--comments {
+    padding-top: 31px;
     padding-bottom: 17px;
 
     @include m.desktop {
@@ -52,7 +48,7 @@
   }
 
   &--name {
-    padding-bottom: 35px;
+    padding-bottom: 30px;
 
     @include m.desktop {
       padding-top: 67px;
@@ -60,9 +56,9 @@
   }
 
   &--contacts {
-    @include m.tablet {
-      display: flex;
-    }
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
   }
 }
 
@@ -79,7 +75,11 @@
   font-weight: 700;
 
   &--name {
-    margin-bottom: 29px;
+    margin-bottom: 25px;
+  }
+
+  &--coment {
+    margin-bottom: 20px;
   }
 
 
@@ -115,15 +115,15 @@
   padding: 0;
 
   &--type {
-    gap: 16px;
+    gap: 15px;
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 28px;
   }
 
   &--color {
     gap: 23px;
-    padding-top: 25px;
-    padding-bottom: 33px;
+    padding-top: 21px;
+    padding-bottom: 29px;
 
     @include m.tablet {
       display: grid;
@@ -143,7 +143,6 @@
 .form__label {
   display: flex;
   flex-direction: column;
-  gap: 16px;
 
   @include m.tablet {
     flex-direction: row;
@@ -173,18 +172,18 @@
 .form__input-text {
   &--comment {
     border: 2px solid v.$color-text;
-    padding: 17px;
-    min-height: 147px;
+    padding: 16px 17px;
+    min-height: 140px;
   }
 
   &--tel,
   &--mail {
     background-repeat: no-repeat;
-    background-position: center right 7px;
   }
 
   &--tel {
     background-image: url("../img/icons/phone.svg");
+    background-position: top 10px right 7px;
 
     &:hover,
     &:focus,
@@ -194,6 +193,7 @@
   }
 
   &--mail {
+    background-position: top 16px right 3px;
     background-image: url("../img/icons/mail.svg");
 
     &:hover,
@@ -207,7 +207,7 @@
 .form__footer {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 24px;
   padding-bottom: 55px;
 
   @include m.tablet {
@@ -222,8 +222,13 @@
   }
 }
 
+.form__info {
+  font-size: 14px;
+}
+
 .form__button {
   width: 100%;
+  font-size: 17px;
 
   @include m.tablet {
     width: auto;

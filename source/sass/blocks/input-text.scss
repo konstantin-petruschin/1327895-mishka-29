@@ -3,16 +3,17 @@
 
 .input-text {
   width: 100%;
-  padding: 17px 40px 17px 0;
+  padding: 16px 40px 16px 0;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 17px;
+  line-height: 18px;
   color: v.$color-text;
   border: none;
   border-bottom: 2px solid v.$color-title;
   background-color: transparent;
 
   @include m.tablet {
-    padding-left: 16px;
+    padding: 17px 40px 17px 16;
   }
 
   &::placeholder {
