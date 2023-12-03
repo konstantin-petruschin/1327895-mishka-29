@@ -77,10 +77,11 @@
   flex-wrap: wrap;
   gap: 26px;
   border-top: 1px solid #e5e5e5;
+  width: 100%;
 
   @include m.tablet {
     border: none;
-    justify-self: flex-end;
+    justify-content: flex-end;
     padding-top: 15px;
   }
 

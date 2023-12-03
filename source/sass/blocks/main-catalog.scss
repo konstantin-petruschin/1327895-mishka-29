@@ -9,4 +9,16 @@
 
 .main-catalog__products {
   margin-bottom: 30px;
+
+  @include m.tablet {
+    margin-bottom: 53px;
+  }
+}
+
+.main-catalog__video-block {
+  margin-bottom: 58px;
+
+  @include m.tablet {
+    margin-bottom: 64px;
+  }
 }
