@@ -2,17 +2,12 @@
 @use "../mixins/media.scss" as m;
 
 .form__group-wrapper {
-  @include m.tablet {
-    background-color: v.$color-background;
-  }
-
   &--contacts {
     padding-bottom: 42px;
+  }
 
-    @include m.desktop {
-      padding-top: 65px;
-      padding-bottom: 0;
-    }
+  @include m.tablet {
+    background-color: v.$color-background;
   }
 }
 
@@ -24,41 +19,37 @@
   padding-top: 0;
   padding-bottom: 0;
 
-  @include m.tablet {
-    display: grid;
-    gap: 80px;
-    grid-template-columns: 88px auto;
-    padding-bottom: 50px;
-  }
-
-  &--type {
-    @include m.tablet {
-      padding-top: 63px;
-    }
-  }
-
-  &--comments {
-    padding-top: 31px;
-    padding-bottom: 17px;
-
-    @include m.desktop {
-      padding-top: 50px;
-      padding-bottom: 53px;
-    }
-  }
-
   &--name {
     padding-bottom: 30px;
-
-    @include m.desktop {
-      padding-top: 67px;
-    }
   }
 
   &--contacts {
     display: flex;
     flex-direction: column;
     gap: 30px;
+  }
+
+  &--comments {
+    padding-top: 31px;
+    padding-bottom: 17px;
+  }
+
+  @include m.tablet {
+    display: grid;
+    gap: 80px;
+    grid-template-columns: 88px auto;
+    padding-bottom: 50px;
+    padding-top: 50px;
+
+    &--type {
+      padding-top: 55px;
+    }
+
+    &--contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
   }
 }
 
@@ -97,6 +88,7 @@
 
   @include m.tablet {
     align-self: start;
+    margin-top: 10px;
   }
 
   &--contact {
@@ -124,19 +116,23 @@
     gap: 23px;
     padding-top: 21px;
     padding-bottom: 29px;
-
-    @include m.tablet {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @include m.desktop {
-      grid-template-columns: repeat(3, 1fr);
-    }
   }
 
   @include m.tablet {
     padding: 0;
+    gap: 24px;
+
+    &--color {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 23px;
+    }
+  }
+
+  @include m.desktop {
+    &--color {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }
 
@@ -147,7 +143,7 @@
   @include m.tablet {
     flex-direction: row;
     align-items: center;
-    gap: 16px;
+    gap: 25px;
   }
 }
 
@@ -156,6 +152,10 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
+
+  @include m.tablet {
+    font-size: 19px;
+  }
 }
 
 .form__contact {

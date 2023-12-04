@@ -6,6 +6,10 @@
   justify-content: flex-start;
   align-items: center;
   gap: 23px;
+
+  @include m.tablet {
+    gap: 28px;
+  }
 }
 
 .pick__name {
@@ -17,6 +21,7 @@
 
   @include m.tablet {
     font-size: 19px;
+    width: calc(100% - 80px);
   }
 }
 
@@ -28,6 +33,11 @@
   height: 38px;
   border: 2px solid v.$color-text;
   background-color: transparent;
+
+  @include m.tablet {
+    width: 52px;
+    height: 52px;
+  }
 
   &--radio {
     border-radius: 50%;
@@ -41,6 +51,11 @@
   height: 18px;
   background-color: v.$color-input-hover;
   border-radius: 50%;
+
+  @include m.tablet {
+    width: 21px;
+    height: 21px;
+  }
 }
 
 .pick__input:checked + .pick__mark--checkbox::before {

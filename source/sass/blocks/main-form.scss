@@ -13,8 +13,10 @@
   padding-top: 18px;
   padding-bottom: 24px;
 
-  @include m.desktop {
-    text-align: center;
+  @include m.tablet {
+    text-align: left;
+    padding-top: 66px;
+    padding-bottom: 9px;
   }
 
   @include m.desktop {
