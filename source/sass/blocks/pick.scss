@@ -23,6 +23,12 @@
     font-size: 19px;
     width: calc(100% - 80px);
   }
+
+  @include m.desktop {
+    &--checkbox {
+      width: 150px;
+    }
+  }
 }
 
 .pick__mark {

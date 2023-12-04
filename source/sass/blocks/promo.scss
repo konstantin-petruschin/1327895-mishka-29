@@ -28,14 +28,23 @@
 }
 
 .promo__wrapper {
-  background-image: url("../img/hero-mobile.png");
+  background-image: url("../img/hero-mobile.webp");
   background-repeat: no-repeat;
   background-position: top -18px center;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hero-mobile@2x.webp");
+    background-size: contain;
+  }
+
   @include m.tablet {
-    background-image: url("../img/hero-desktop.png");
+    background-image: url("../img/hero-desktop.webp");
     background-position: top 2px center;
     margin-top: -70px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero-desktop@2x.webp");
+    }
   }
 }
 

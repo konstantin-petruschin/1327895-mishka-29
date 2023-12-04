@@ -3,7 +3,7 @@
 
 
 .nav-link {
-  padding: 27px 30px 27px 76px;
+  padding: 28px 30px 26px 76px;
   text-decoration: none;
   font-size: 17px;
   line-height: 24px;
@@ -17,13 +17,13 @@
     height: 100%;
   }
 
-  &:hover,
+  &:hover[href],
   &:focus {
     color: rgba(v.$color-title, $alpha: 0.6);
     outline: none;
   }
 
-  &:active {
+  &:active[href] {
     color: rgba(v.$color-title, $alpha: 0.3);
   }
 }

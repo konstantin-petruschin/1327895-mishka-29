@@ -10,6 +10,10 @@
   <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="images/favicons/apple.png"> <!-- 180×180 -->
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensans.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff" as="font" type="font/woff" crossorigin="anonymous">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=05c44d75-7165-414e-b9aa-78dacc85a092&lang=ru_RU" defer>
   </script>
   <script src="./js/main.js" defer></script>
@@ -62,9 +66,9 @@
           <h1 class="heading__title title">Вязание на заказ</h1>
         </div>
       </div>
-      <div class="form__description container">
+      <div class="main-form__description container">
         <p class="main-form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму
-        заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+          заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       </div>
 
       <form class="main-form__application form" action="https://echo.htmlacademy.ru/" method="get">
@@ -163,23 +167,24 @@
             </label>
             <label class="form__contact">
               <span class="form__group-title form__group-title--contact">e&#8209;mail</span>
-              <input class="form__input-text form__input-text--mail input-text" type="email" name="e-mail" placeholder="Ваш Email*">
+              <input class="form__input-text form__input-text--mail input-text" type="email" name="e-mail"
+                placeholder="Ваш Email*">
             </label>
           </fieldset>
         </div>
-          <fieldset class="form__group form__group--comments container">
-            <h2 class="form__group-title form__group-title--coment">Доп</h2>
-            <textarea class="form__input-text form__input-text--comment input-text" name="comment"
-              placeholder="Опишите все ваши пожелания к заказу"></textarea>
-          </fieldset>
-          <div class="form__footer container">
+        <fieldset class="form__group form__group--comments container">
+          <h2 class="form__group-title form__group-title--coment">Доп</h2>
+          <textarea class="form__input-text form__input-text--comment input-text" name="comment"
+            placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        </fieldset>
+        <div class="form__footer container">
+          <div class="form__footer-wrapper">
             <span class="form__info">*Поля обязательны для заполнения</span>
             <button class="form__button button button--primary" type="submit">Отправить заказ</button>
           </div>
-
+        </div>
       </form>
     </section>
-
   </main>
   <footer class="footer">
     <div class="footer__wrapper container">

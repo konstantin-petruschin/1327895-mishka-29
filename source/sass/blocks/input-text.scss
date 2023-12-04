@@ -17,6 +17,11 @@
     font-size: 19px;
   }
 
+  @include m.desktop {
+    padding-top: 14px;
+    padding-left: 19px;
+  }
+
   &::placeholder {
     color: rgba(0, 0, 0, 0.3);
   }

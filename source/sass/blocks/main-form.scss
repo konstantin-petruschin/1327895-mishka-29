@@ -7,21 +7,26 @@
   }
 }
 
-.main-form__text {
-  text-align: left;
-  margin: 0;
+.main-form__description {
   padding-top: 18px;
   padding-bottom: 24px;
 
   @include m.tablet {
-    text-align: left;
     padding-top: 66px;
     padding-bottom: 9px;
   }
 
   @include m.desktop {
-    padding-left: 210px;
-    padding-right: 210px;
-    text-align: left;
+    padding-top: 115px;
+  }
+}
+
+.main-form__text {
+  text-align: left;
+  margin: 0;
+
+  @include m.desktop {
+    padding-left: 176px;
+    padding-right: 150px;
   }
 }
