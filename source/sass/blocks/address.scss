@@ -131,6 +131,16 @@
   @include m.desktop {
     text-underline-offset: 11px;
   }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: v.$color-input-hover;
+  }
+
+  &:active {
+    text-decoration-color: rgba(v.$color-input-hover, $alpha: 0.1);
+  }
 }
 
 .address__map {

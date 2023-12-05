@@ -21,8 +21,7 @@
     @include m.desktop {
       height: 34px;
       background-size: 1250px 34px;
-      background-position: 12px 0;
-      left: 1px;
+      background-position: 16px 0;
     }
   }
 }
@@ -131,6 +130,11 @@
   &--interior {
     background-color: v.$color-primary;
 
+    &:hover,
+    &:focus {
+      background-color: #59d5bc;
+    }
+
     &::before {
       background-color: v.$color-primary;
     }
@@ -155,6 +159,11 @@
   &--toys {
     background-color: v.$color-secondary;
 
+    &:hover,
+    &:focus {
+      background-color: #46c1ae;
+    }
+
     &::before {
       background-color: v.$color-secondary;
     }
@@ -178,18 +187,35 @@
     }
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     padding-top: 21px;
     padding-bottom: 41px;
   }
 }
 
-.promo__assortment-link:hover::before {
+.promo__assortment-link:hover::before,
+.promo__assortment-link:focus::before {
   top: -5px;
+}
+
+.promo__assortment-link--interior:hover::before,
+.promo__assortment-link--interior:focus::before {
+  background-color: #59d5bc;
+}
+
+.promo__assortment-link--toys:hover::before,
+.promo__assortment-link--toys:focus::before {
+  background-color: #46c1ae;
 }
 
 .promo__assortment-link:hover::after {
   top: 18px;
+}
+
+.promo__assortment-link:hover::after,
+.promo__assortment-link:focus::after {
+  opacity: 0.7;
 }
 
 .promo__assortment-link:active::after {
