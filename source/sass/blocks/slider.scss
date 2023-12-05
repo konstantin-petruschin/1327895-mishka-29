@@ -15,10 +15,15 @@
   margin: 0;
   padding: 0;
   margin-bottom: 33px;
-  padding-right: 65px;
+  line-height: 30px;
+
+  @include m.tablet {
+    margin-bottom: 58px;
+  }
 
   @include m.desktop {
     margin-bottom: 42px;
+    padding-right: 65px;
   }
 }
 
@@ -32,16 +37,21 @@
   font-weight: 700;
   margin: 0;
   padding: 0;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
+
+  @include m.tablet {
+    font-size: 18px;
+    margin: 0;
+  }
 
   @include m.desktop {
-    margin: 0;
+    font-size: 17px;
   }
 }
 
 .slider__autor-link {
   text-decoration: none;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
   display: inline-block;
 }
 
@@ -52,15 +62,15 @@
 
   @include m.tablet {
     position: absolute;
-    bottom: 50px;
-    right: 0;
+    bottom: 46px;
+    right: 19px;
     width: 137px;
     margin: 0;
     gap: 37px;
   }
 
   @include m.desktop {
-    bottom: 46px;
+    bottom: 48px;
     right: 20px;
   }
 }
@@ -69,19 +79,23 @@
   border: 1px solid v.$color-border;
   background-image: url("../img/icons/next.svg");
   background-repeat: no-repeat;
-  background-position: center left 38px;
   background-color: transparent;
-  height: 58px;
-
-  @include m.tablet {
-    border: none;
-    height: 26px;
-    background-position: center;
-  }
+  height: 53px;
 
   &--prev {
     border-left: none;
     transform: rotate(180deg);
+    background-position: center left 42px;
+  }
+
+  &--next {
+    background-position: center left 36px;
+  }
+
+  @include m.tablet {
+    border: none;
+    height: 26px;
+    background-position: center left;
   }
 
   &:hover {
@@ -96,8 +110,9 @@
 .slider__button {
   @include m.tablet {
     position: absolute;
-    top: -70px;
+    top: -93px;
     right: 0;
+    min-width: 175px;
   }
 
   @include m.desktop {

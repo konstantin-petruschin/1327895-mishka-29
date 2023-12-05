@@ -14,13 +14,14 @@
 .nav-basic__link {
   @include m.tablet {
     font-size: 15px;
-    padding: 33px 14px 33px 24px;
+    padding: 22px 14px 22px 24px;
   }
 
   @include m.desktop {
     font-size: 17px;
     padding-left: 35px;
     padding-right: 35px;
+    padding-top: 33px;
   }
 
   &:nth-child(odd) {

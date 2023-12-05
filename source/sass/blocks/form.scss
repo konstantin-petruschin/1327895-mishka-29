@@ -2,17 +2,12 @@
 @use "../mixins/media.scss" as m;
 
 .form__group-wrapper {
-  @include m.tablet {
-    background-color: v.$color-background;
-  }
-
   &--contacts {
     padding-bottom: 42px;
+  }
 
-    @include m.desktop {
-      padding-top: 65px;
-      padding-bottom: 0;
-    }
+  @include m.tablet {
+    background-color: v.$color-background;
   }
 }
 
@@ -24,44 +19,62 @@
   padding-top: 0;
   padding-bottom: 0;
 
+  &--name {
+    padding-bottom: 30px;
+  }
+
+  &--contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &--comments {
+    padding-top: 31px;
+    padding-bottom: 15px;
+  }
+
   @include m.tablet {
     display: grid;
     gap: 80px;
     grid-template-columns: 88px auto;
     padding-bottom: 50px;
-  }
-
-  &--type {
-    @include m.tablet {
-      padding-top: 63px;
-    }
-  }
-
-  &--color {
     padding-top: 50px;
-  }
 
-  &--coments {
-    padding-top: 23px;
-    padding-bottom: 17px;
-
-    @include m.desktop {
-      padding-top: 50px;
-      padding-bottom: 53px;
+    &--type {
+      padding-top: 55px;
     }
-  }
 
-  &--name {
-    padding-bottom: 35px;
-
-    @include m.desktop {
-      padding-top: 67px;
-    }
-  }
-
-  &--contacts {
-    @include m.tablet {
+    &--contacts {
       display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    &--comments {
+      padding-bottom: 55px;
+    }
+  }
+
+  @include m.desktop {
+    grid-template-columns: 95px 766px;
+    gap: 80px;
+
+    &--color {
+      padding-top: 48px;
+    }
+
+    &--comments {
+      padding-bottom: 50px;
+    }
+
+    &--name,
+    &--comments {
+      grid-template-columns: 95px 699px;
+    }
+
+    &--contacts {
+      gap: 25px 80px;
     }
   }
 }
@@ -79,7 +92,11 @@
   font-weight: 700;
 
   &--name {
-    margin-bottom: 29px;
+    margin-bottom: 25px;
+  }
+
+  &--coment {
+    margin-bottom: 20px;
   }
 
 
@@ -89,20 +106,24 @@
     width: 100%;
     height: 1px;
     background-color: #61d1bb;
-
-    @include m.tablet {
-      display: none;
-    }
   }
 
   @include m.tablet {
     align-self: start;
+    margin-top: 10px;
+
+    &::after {
+      display: none;
+    }
+
+    &--contact {
+      align-self: center;
+      margin: 0;
+    }
   }
 
-  &--contact {
-    @include m.tablet {
-      align-self: center;
-    }
+  @include m.desktop {
+    margin-left: 60px;
   }
 }
 
@@ -115,40 +136,44 @@
   padding: 0;
 
   &--type {
-    gap: 16px;
+    gap: 15px;
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 28px;
   }
 
   &--color {
     gap: 23px;
-    padding-top: 25px;
-    padding-bottom: 33px;
-
-    @include m.tablet {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @include m.desktop {
-      grid-template-columns: repeat(3, 1fr);
-    }
+    padding-top: 21px;
+    padding-bottom: 29px;
   }
 
   @include m.tablet {
     padding: 0;
+    gap: 24px;
+
+    &--color {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 23px;
+    }
+  }
+
+  @include m.desktop {
+    &--color {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
   }
 }
 
 .form__label {
   display: flex;
   flex-direction: column;
-  gap: 16px;
 
   @include m.tablet {
     flex-direction: row;
     align-items: center;
-    gap: 16px;
+    gap: 25px;
   }
 }
 
@@ -157,6 +182,10 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
+
+  @include m.tablet {
+    font-size: 19px;
+  }
 }
 
 .form__contact {
@@ -168,23 +197,27 @@
     gap: 80px;
     grid-template-columns: 88px auto;
   }
+
+  @include m.desktop {
+    grid-template-columns: 95px 699px;
+  }
 }
 
 .form__input-text {
   &--comment {
     border: 2px solid v.$color-text;
-    padding: 17px;
-    min-height: 147px;
+    padding: 16px 17px;
+    min-height: 140px;
   }
 
   &--tel,
   &--mail {
     background-repeat: no-repeat;
-    background-position: center right 7px;
   }
 
   &--tel {
     background-image: url("../img/icons/phone.svg");
+    background-position: top 10px right 7px;
 
     &:hover,
     &:focus,
@@ -194,6 +227,7 @@
   }
 
   &--mail {
+    background-position: top 16px right 3px;
     background-image: url("../img/icons/mail.svg");
 
     &:hover,
@@ -202,13 +236,48 @@
       background-image: url("../img/icons/mail-hover.svg");
     }
   }
+
+  @include m.tablet {
+    &--tel,
+    &--mail {
+      padding-top: 10px;
+      padding-bottom: 15px;
+    }
+
+    &--tel {
+      background-position: top 10px right 7px;
+    }
+
+    &--mail {
+      background-position: top 12px right 26px;
+    }
+  }
+
+  @include m.desktop {
+    &--mail {
+      background-position: top 16px right 3px;
+    }
+  }
 }
 
 .form__footer {
+  padding-bottom: 55px;
+
+  @include m.tablet {
+    padding-bottom: 49px;
+  }
+
+  @include m.desktop {
+    padding-left: 223px;
+    padding-right: 223px;
+  }
+}
+
+.form__footer-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  padding-bottom: 55px;
+  gap: 24px;
+
 
   @include m.tablet {
     flex-direction: row-reverse;
@@ -216,16 +285,23 @@
     align-items: center;
     justify-content: space-between;
   }
+}
 
-  @include m.desktop {
-    padding-left: 218px;
+.form__info {
+  font-size: 14px;
+
+  @include m.tablet {
+    font-size: 17px;
   }
 }
 
 .form__button {
   width: 100%;
+  font-size: 17px;
 
   @include m.tablet {
     width: auto;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }

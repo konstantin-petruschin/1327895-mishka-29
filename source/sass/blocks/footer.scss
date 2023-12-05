@@ -12,13 +12,15 @@
 
   @include m.tablet {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 100px;
+    padding-top: 34px;
+    padding-bottom: 32px;
+    grid-template-columns: 143px 142px 1fr;
+    gap: 84px;
   }
 
   @include m.desktop {
     display: grid;
-    grid-template-columns: 315px 142px 1fr;
+    grid-template-columns: 315px 142px 393px;
     gap: 100px;
     padding-top: 35px;
     padding-bottom: 35px;
@@ -43,16 +45,18 @@
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  gap: 33px;
-  width: 145px;
+  gap: 34px;
   list-style: none;
   padding: 0;
   margin: 0;
-  padding-top: 25px;
+  padding-top: 30px;
   padding-bottom: 30px;
 
   @include m.tablet {
     justify-self: center;
+    padding-top: 25px;
+    width: 145px;
+    gap: 32px;
   }
 }
 
@@ -73,15 +77,18 @@
   flex-wrap: wrap;
   gap: 26px;
   border-top: 1px solid #e5e5e5;
+  width: 100%;
 
   @include m.tablet {
     border: none;
-    justify-self: flex-end;
+    justify-content: flex-end;
+    padding-top: 15px;
   }
 
   @include m.desktop {
     padding-top: 10px;
     padding-bottom: 19px;
+    gap: 29px;
   }
 }
 

@@ -14,6 +14,11 @@
   font-size: 15px;
   padding: 19px 31px;
 
+  @include m.desktop {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+
   &:nth-child(3n+1) {
     padding-left: 0;
   }

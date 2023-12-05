@@ -1,18 +1,13 @@
 @use "../common/variables.scss" as v;
 @use "../mixins/media.scss" as m;
 
-.review {
-  padding-bottom: 45px;
-
-  @include m.desktop {
-    padding-bottom: 0;
-  }
-}
-
 .review__wrapper {
   position: relative;
+  padding-bottom: 49px;
 
   @include m.tablet {
+    padding-top: 84px;
+    padding-bottom: 100px;
     background-image: url("..//img/review-background.jpg");
     background-repeat: no-repeat;
   }
@@ -47,6 +42,10 @@
 
 .review__title {
   margin-bottom: 14px;
+
+  @include m.tablet {
+    margin-bottom: 37px;
+  }
 
   @include m.desktop {
     margin-bottom: 35px;
