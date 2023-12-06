@@ -15,6 +15,14 @@
   }
 }
 
+.card:hover .card__wrapper {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card:active .card__wrapper {
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
 .card__link-image {
   @include m.tablet {
     width: 50%;
@@ -41,6 +49,7 @@
     display: flex;
     flex-direction: column;
     width: auto;
+    height: 100%;
     padding-left: 28px;
   }
 }
@@ -101,6 +110,15 @@
   @include m.tablet {
     font-size: 17px;
   }
+}
+
+.card__cart-link:hover .card__icon,
+.card__cart-link:focus .card__icon {
+  color: v.$color-primary;
+}
+
+.card__cart-link:active .card__icon {
+  opacity: 0.3;
 }
 
 .card__icon {

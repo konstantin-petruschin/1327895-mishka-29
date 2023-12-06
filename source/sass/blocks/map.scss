@@ -18,3 +18,13 @@
 .map__image {
   display: none;
 }
+
+.no-js {
+  .map__image {
+    display: block;
+  }
+
+  .map__yandex {
+    display: none;
+  }
+}
