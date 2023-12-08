@@ -82,3 +82,14 @@
     grid-row: 2 / 3;
   }
 }
+
+.no-js {
+  .main-nav {
+    display: flex;
+    position: static;
+
+    @include m.tablet {
+      display: grid;
+    }
+  }
+}

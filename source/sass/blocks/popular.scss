@@ -28,8 +28,9 @@
 
   @include m.desktop {
     padding: 0;
+    padding-bottom: 73px;
     grid-template-columns: 115px 292px 525px;
-    grid-template-rows: minmax(57px, auto) auto auto;
+    grid-template-rows: minmax(57px, auto) minmax(371px, auto) minmax(133px, auto);
     column-gap: 59px;
     max-width: 1050px;
   }

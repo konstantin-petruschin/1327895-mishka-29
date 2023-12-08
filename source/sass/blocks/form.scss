@@ -245,15 +245,19 @@
     }
 
     &--tel {
-      background-position: top 10px right 7px;
+      background-position: top 12px right 26px;
     }
 
     &--mail {
-      background-position: top 12px right 26px;
+      background-position: top 16px right 22px;
     }
   }
 
   @include m.desktop {
+    &--tel {
+      background-position: top 12px right 6px;
+    }
+
     &--mail {
       background-position: top 16px right 3px;
     }

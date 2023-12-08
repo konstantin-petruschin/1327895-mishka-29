@@ -8,8 +8,13 @@
   @include m.tablet {
     padding-top: 84px;
     padding-bottom: 100px;
-    background-image: url("..//img/review-background.jpg");
+    background-image: url("..//img/review-background.webp");
     background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("..//img/review-background@2x.webp");
+      background-size: 350px auto;
+    }
   }
 
   @include m.desktop {
