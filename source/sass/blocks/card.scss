@@ -68,6 +68,16 @@
     margin-bottom: 7px;
     max-width: 240px;
   }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .card__description {
